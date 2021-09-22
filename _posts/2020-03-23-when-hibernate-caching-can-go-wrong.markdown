@@ -2,7 +2,6 @@
 layout: post
 title:  "When Hibernate caching can go wrong"
 date:   2020-03-23 12:00:00 +0200
-categories: hibernate java caching
 image: caching_thumbnail.png
 excerpt: "It all started from us trying to setup Hibernate ehcache in our big project with a lot of entities to improve the performance. Eventually that took a lot of time because we ran into a bunch of issues..."
 ---
@@ -356,3 +355,4 @@ Often the problem can sit in lack of understanding how ehcache really works or i
 Good luck!
 
 [lunatech-blog]: https://blog.lunatech.com/
+

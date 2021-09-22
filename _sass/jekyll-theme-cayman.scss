@@ -388,7 +388,7 @@ a {
     font-weight: 900;
     font-size: 23px;
     color: $button-text-color;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .page:link {
@@ -413,6 +413,12 @@ a {
     float: left;
     border-bottom: 5px dotted $post-border-color;
     padding-top: 30px; padding-bottom: 30px;
+}
+
+.post-list:after {
+    content: " ";
+    display: block;
+    clear: both;
 }
 
 .thumbnail-image {

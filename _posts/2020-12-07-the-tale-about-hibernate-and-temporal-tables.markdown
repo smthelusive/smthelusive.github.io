@@ -2,7 +2,6 @@
 layout: post
 title:  "The tale about Hibernate and temporal tables"
 date:   2020-12-07 12:00:00 +0200
-categories: hibernate java temporal mssql
 image: temporal_thumbnail.png
 excerpt: "Earlier this year, I was involved in solving an issue on a project that was using Hibernate + Envers and Microsoft SQL Server as the database. The choice of database was mainly driven by a project requirement to have history..."
 ---

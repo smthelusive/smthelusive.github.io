@@ -1,0 +1,66 @@
+---
+layout: default
+pagination:
+enabled: true
+---
+<div class="home" style="padding-bottom: 100%;">
+    {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+    {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+    {% else %}
+    {% assign posts = site.posts %}
+    {% endif %}
+
+    {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <div class="post-list">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- for post in paginator.posts -%}
+        <div class="post-div">
+            <div class="post-image-div">
+                <a href="{{ post.url | relative_url }}">
+                <img class="thumbnail-image"
+                        src="/assets/images/thumbnails/{{post.image}}"
+                        width=90%">
+                </a>
+            </div>
+            <div class="post-detail-div">
+                <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </h3>
+                <span class="post-meta">{{ post.date | date: date_format }}</span>
+                <br><br>
+                {{ post.excerpt }}
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+
+    {% if site.paginate %}
+    <div class="pager">
+        {%- if paginator.previous_page %}
+        <a style="float:left;"
+           href="{{ paginator.previous_page_path | relative_url }}"
+           class="page">Newer posts</a>
+        {%- else %}
+        {%- endif %}
+        {%- if paginator.next_page %}
+        <a style="float:right;"
+           href="{{ paginator.next_page_path | relative_url }}"
+           class="page">Older posts</a>
+        {%- else %}
+        {%- endif %}
+    </div>
+    {%- endif %}
+    {%- endif -%}
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</div>

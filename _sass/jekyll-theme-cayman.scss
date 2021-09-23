@@ -391,6 +391,10 @@ a {
     padding-top: 15px;
 }
 
+.page:hover {
+    filter: brightness(120%);
+}
+
 .page:link {
     text-decoration: none;
 }
@@ -403,6 +407,10 @@ a {
     color: $header-heading-color;
     padding-top: 10px;
     opacity: 0.7;
+}
+
+.menu-button:hover {
+    opacity: 1;
 }
 
 .menu-button:link {
@@ -423,6 +431,10 @@ a {
 
 .thumbnail-image {
     border-radius: 5%;
+}
+
+.thumbnail-image:hover {
+    filter: brightness(110%);
 }
 
 .post-image-div {
@@ -455,4 +467,8 @@ a {
 
 .header-link:link {
     text-decoration:none;
+}
+
+.contact-image:hover {
+  filter: brightness(120%);
 }

@@ -50,13 +50,13 @@ enabled: true
         {%- if paginator.previous_page %}
         <a style="float:left;"
            href="{{ paginator.previous_page_path | relative_url }}"
-           class="page">Newer posts</a>
+           class="page">← Newer posts</a>
         {%- else %}
         {%- endif %}
         {%- if paginator.next_page %}
         <a style="float:right;"
            href="{{ paginator.next_page_path | relative_url }}"
-           class="page">Older posts</a>
+           class="page">Older posts →</a>
         {%- else %}
         {%- endif %}
     </div>

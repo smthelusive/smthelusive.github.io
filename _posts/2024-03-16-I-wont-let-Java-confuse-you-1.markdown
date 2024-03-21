@@ -114,6 +114,6 @@ it should perform, it will shout at you.
 
 Hope this was fun and educative! See you in the next one!
 
-P.S.: If you liked this one, chances are you’d also like the one about [increments][previous-article].
+P.S.: If you liked this one, chances are you’d also like the one about [increments]({{ site.baseurl }}{% link _posts/2024-03-07-I-wont-let-Java-confuse-you-0.markdown %}).
 
 [previous-article]: https://medium.com/@nataliiadziubenko/i-wont-let-java-confuse-you-0-increment-bcb91533ce32

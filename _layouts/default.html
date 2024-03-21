@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="icon" href="/assets/images/logo/bar-logo-tag.png">
+    <link rel="icon" href="/assets/images/logo/logo-gradient-duke-2.png">
     {% include head-custom.html %}
 </head>
 <body>
@@ -17,13 +17,15 @@
 <header>
     <div style="float: right;margin-top:10px;">
         <a style="margin-right: 10px;" href="/" class="menu-button">blog</a>
-        <a style="margin-right: 20px;" href="/about" class="menu-button">about</a>
+        <a style="margin-right: 10px;" href="/talks" class="menu-button">talks</a>
+        <a style="margin-right: 10px;" href="/media" class="menu-button">media</a>
+        <a style="margin-right: 10px;" href="/about" class="menu-button">about</a>
     </div>
     <div class="page-header" role="banner">
 
         <a  class="header-link" href="/">
-            <img src="/assets/images/curious_engineer.png" height="80"/>
-            <h2 class="project-tagline">{{ site.blog_description | default: site.github.project_tagline }}</h2>
+            <img src="/assets/images/curious_engineer_duke.png" height="150" style="opacity:95%;"/>
+<!--            <h2 class="project-tagline">{{ site.blog_description | default: site.github.project_tagline }}</h2>-->
         </a>
         {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
@@ -40,14 +42,11 @@
             <a  href="https://linkedin.com/in/nataliia-dziubenko-341919b8">
                 <img class="contact-image" src="/assets/images/contacts/linkedin.svg" width=40px">
             </a>
-            <a  href="https://twitter.com/natadziubenko">
+            <a  href="https://twitter.com/worth_exploring">
                 <img class="contact-image" src="/assets/images/contacts/twitter.svg" width=40px">
             </a>
             <a  href="https://github.com/smthelusive">
                 <img class="contact-image" src="/assets/images/contacts/github.svg" width=40px">
-            </a>
-            <a  href="https://www.youtube.com/c/itsworthexploring">
-                <img class="contact-image" src="/assets/images/contacts/youtube.svg" width=40px">
             </a>
         </div>
         <div style="margin-top: 10px; padding-bottom: 10px;">

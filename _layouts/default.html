@@ -2,7 +2,6 @@
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/thumbnails/{{ page.image }}">
 
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,6 +11,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="icon" href="/assets/images/logo/logo-gradient-duke-3.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo/logo-gradient-duke-3.png">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/thumbnails/{{ page.image }}">
 
     {% include head-custom.html %}
 </head>

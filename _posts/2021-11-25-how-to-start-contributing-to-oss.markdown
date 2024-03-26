@@ -2,7 +2,7 @@
 layout: post
 title:  "How to start contributing to OSS"
 date:   2021-11-25 12:00:00 +0200
-image: oss_thumbnail.png
+image: /assets/images/thumbnails/oss_thumbnail.png
 excerpt: "Many of us, software engineers, at some point in time decide that we would like to get involved with an open-source project. Many of us indeed become contributors, but it’s not always clear where to start and how to find a project that would be a perfect match. For some years these questions were holding me back from starting, and I thought that possibly I’m not the only one. So I decided to share my experience and hopefully it saves you some time or frees you of unnecessary frustrations..."
 ---
 <em>This article was first published at [Xebia blog][xebia-blog]</em>

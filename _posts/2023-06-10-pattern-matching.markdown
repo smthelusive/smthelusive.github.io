@@ -2,7 +2,7 @@
 layout: post
 title:  "Java 20 Pattern Matching for Switch: What’s Under the Hood?"
 date:   2023-06-10 12:00:00 +0200
-image: pattern_matching.png
+image: /assets/images/thumbnails/pattern_matching.png
 excerpt: "Pattern matching for switch statements and expressions has evolved as the latest releases unveiled. We can already play with the most exciting changes, such as pattern guards and record patterns, in the Java 19 and 20 preview versions..."
 ---
 

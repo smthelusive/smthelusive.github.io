@@ -2,7 +2,7 @@
 layout: post
 title:  "I won’t let Java confuse you #0: increment"
 date:   2024-03-07 12:00:00 +0200
-image: java_confuse_thumbnail.png
+image: /assets/images/thumbnails/java_confuse_thumbnail.png
 excerpt: "Sometimes the code that seems really clear can turn out to be quite deceiving, even in some really basic concepts. In these situations, it’s good to question whether that code doesn’t smell..."
 ---
 Sometimes the code that seems really clear can turn out to be quite deceiving, 

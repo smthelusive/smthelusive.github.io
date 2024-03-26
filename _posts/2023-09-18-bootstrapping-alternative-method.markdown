@@ -2,7 +2,7 @@
 layout: post
 title:  "Java Invokedynamic: Bootstrapping an Alternative Method"
 date:   2023-09-18 12:00:00 +0200
-image: alternative_bootstrap.png
+image: /assets/images/thumbnails/alternative_bootstrap.png
 excerpt: "This experiment intends to demonstrate the power of the invokedynamic instruction in JVM. This instruction is used for different pieces of Java functionality these days, such as switch statements, lambdas, and many cases of String concatenation..."
 ---
 This experiment intends to demonstrate the power of the `invokedynamic` instruction in JVM. 

@@ -2,7 +2,7 @@
 layout: post
 title:  "invokedynamic in GraalVM native image: how is it possible?"
 date:   2023-06-27 12:00:00 +0200
-image: indy_graal.png
+image: /assets/images/thumbnails/indy_graal.png
 excerpt: "GraalVM has this really cool feature: you can build a native executable from your Java, Scala, or other application. Your application becomes lighter, starts super quickly, it’s more performant, and you don’t need a JVM to run it on your machine..."
 ---
 GraalVM has this really cool feature: you can build a native executable from your Java, Scala, 

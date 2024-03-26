@@ -2,7 +2,7 @@
 layout: post
 title:  "I won’t let Java confuse you #2: expressions"
 date:   2024-03-25 12:00:00 +0200
-image: java_confuse_thumbnail.png
+image: /assets/images/thumbnails/java_confuse_thumbnail.png
 excerpt: "Welcome to the third episode of the Java-unconfusing series, where we talk about the things that look innocent, while the results seem confusing. Today I'm going to show you a simple numeric expression..."
 ---
 Welcome to the third episode of the Java-unconfusing series, where we talk about the things that look 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Java compiler-decompiler ping-pong"
 date:   2023-10-31 12:00:00 +0200
-image: pingpong.png
+image: /assets/images/thumbnails/pingpong.png
 excerpt: "This small episode related to Java compilation seemed interesting and a bit funny to me, so I’m sharing it here..."
 ---
 This small episode related to Java compilation seemed interesting and a bit funny to me, so I’m sharing it here. 

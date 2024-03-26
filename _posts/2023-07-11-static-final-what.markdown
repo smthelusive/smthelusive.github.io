@@ -2,7 +2,7 @@
 layout: post
 title:  "static final what?"
 date:   2023-07-11 12:00:00 +0200
-image: static_final_what.png
+image: /assets/images/thumbnails/static_final_what.png
 excerpt: "I accidentally discovered something interesting about constant fields in Java, so I decided to share it here in a short article. When we need to create a constant field in Java, we somehow automatically use this conventional construction..."
 ---
 I accidentally discovered something interesting about constant fields in Java, 

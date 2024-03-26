@@ -2,7 +2,7 @@
 layout: post
 title:  "Java 21: So How Should We Construct Strings Now?"
 date:   2023-08-18 12:00:00 +0200
-image: java_21_strings.png
+image: /assets/images/thumbnails/java_21_strings.png
 excerpt: "Java 21 brings in a lot of cool features, and one of them is the preview of String Templates*. While it serves more purposes than just classic String interpolation, for us Java developers, it’s yet another way to concatenate Strings in a “proper” way..."
 ---
 Java 21 brings in a lot of cool features, and one of them is the preview of String Templates*. 

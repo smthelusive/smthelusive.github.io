@@ -2,7 +2,7 @@
 layout: post
 title:  "JVM bytecode instructions explained"
 date:   2023-05-25 12:00:00 +0200
-image: bytecode_explained.png
+image: /assets/images/thumbnails/bytecode_explained.png
 excerpt: "In the first part, we discussed the bytecode and some parts that it contains, namely debug information and constant pool. In this part, we will discuss the bytecode execution. Below is the example Java class and the verbose javap output of its bytecode. Our main focus will be on the Code section of the main method..."
 ---
 In the [first part]({{ site.baseurl }}{% link _posts/2023-05-22-JVM-bytecode-intro.markdown %}), we discussed the bytecode and some parts that it contains, namely debug information 

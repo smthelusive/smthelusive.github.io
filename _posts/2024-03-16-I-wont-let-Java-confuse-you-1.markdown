@@ -2,7 +2,7 @@
 layout: post
 title:  "I won’t let Java confuse you #1: String concatenation operator +"
 date:   2024-03-16 12:00:00 +0200
-image: java_confuse_thumbnail.png
+image: /assets/images/thumbnails/java_confuse_thumbnail.png
 excerpt: "Welcome to the second episode of this little Java-unconfusing series. Today I would like to talk briefly about String concatenation operator +..."
 ---
 Welcome to the second episode of this little Java-unconfusing series. 

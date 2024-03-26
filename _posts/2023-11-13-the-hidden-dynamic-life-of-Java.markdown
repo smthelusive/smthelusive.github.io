@@ -2,7 +2,7 @@
 layout: post
 title:  "The Hidden Dynamic Life of Java"
 date:   2023-11-13 12:00:00 +0200
-image: indy.png
+image: /assets/images/thumbnails/indy.png
 excerpt: "This article is an (elaborate) transcript of my talk, ‘The Hidden Dynamic Life of Java’, presented on J-Fall 2023..."
 ---
 This article is an (elaborate) transcript of my talk, [‘The Hidden Dynamic Life of Java’][talk], 

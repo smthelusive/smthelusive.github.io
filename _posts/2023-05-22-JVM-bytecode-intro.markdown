@@ -2,7 +2,7 @@
 layout: post
 title:  "JVM bytecode: introduction"
 date:   2023-05-22 12:00:00 +0200
-image: bytecode_explained.png
+image: /assets/images/thumbnails/bytecode_explained.png
 excerpt: "Recently, I had a chance to dive deeper into the JVM bytecode than I was ever expecting. It took me tons of documentation, articles, Stack Overflow topics, and bytecode listings to gain some understanding of the JVM internals. Generating my own bytecode and making a lot of mistakes also was a very insightful experience 😀."
 ---
 Recently, I had a chance to dive deeper into the JVM bytecode than I was ever expecting. 

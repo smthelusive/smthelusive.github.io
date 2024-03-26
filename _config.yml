@@ -3,7 +3,7 @@ description: Blog
 blog_description:
   Curiosity brings us to a beautiful journey. Let's share this journey together.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://nataliiadziubenko.com # the base hostname & protocol for your site, e.g. http://example.com
 paginate: 10
 
 # Build settings

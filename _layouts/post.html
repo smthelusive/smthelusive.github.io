@@ -2,12 +2,6 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-    <script async src="https://api.countapi.xyz/hit/nataliiadziubenko.com/{{ page.title | remove: ' ' }}?callback=callbackName"></script>
-    <script type="text/javascript">
-        function callbackName(response) {
-            document.getElementById('visits').innerText = response.value;
-        }
-    </script>
     <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
         <p class="post-meta">
@@ -15,7 +9,6 @@ layout: default
             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: date_format }}
             </time>
-            <span style="display:none;" id="visits"></span>
             {%- if page.modified_date -%}
             ~
             {%- assign mdate = page.modified_date | date_to_xmlschema -%}
@@ -37,6 +30,11 @@ layout: default
     </div>
     <div style="float: right;">
         <a href="/" class="page">back to blog</a>
+    </div>
+
+    <div style="float: left; margin-top: 20px">
+        <a href="https://hits.sh/nataliiadziubenko.com/{{ page.title | slugify}}">
+            <img alt="Hits" src="https://hits.sh/nataliiadziubenko.com/{{ page.title | slugify}}.svg?style=for-the-badge&label=visits:&color=818181&labelColor=818181"/></a>
     </div>
 
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

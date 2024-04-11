@@ -21,9 +21,6 @@ I'm also quite excited about GraalVM, so I worked on a contribution for native i
 Sometimes, I talk at the Java User Groups and conferences about fun things that I learn.
 But mostly I like to write about it, that's why this blog exists.
 
-If you're curious, [here you can find some of my talks]({{ site.baseurl }}{% link talks.markdown %}).
-
-And some of my other work:
-<iframe src="https://player.flipsnack.com?hash=NTU4Rjg1QUE5RjcrMWNteXBjeDRvdA==" style="border-radius:5%" width="100%" height="600" frameborder="0" scrolling="no" seamless="seamless" allowfullscreen="allowfullscreen"></iframe>
+If you're curious, [here you can find some of my talks]({{ site.baseurl }}{% link talks.markdown %}) and some of my [other work](https://www.flipsnack.com/558F85AA9F7/jam03-23-7u8g5l3tk5/full-view.html?p=6).
 
 Hope you find this blog educative and fun!

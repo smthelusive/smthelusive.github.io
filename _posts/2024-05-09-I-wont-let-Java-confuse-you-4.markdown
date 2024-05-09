@@ -2,8 +2,11 @@
 layout: post
 title:  "I won’t let Java confuse you #4: unreachable statements"
 date:   2024-05-09 12:00:00 +0200
-image: /assets/images/thumbnails/java_confuse_thumbnail.png
-excerpt: "Do you think Java consistently rejects all unreachable code? Well..."
+image: /assets/images/thumbnails/unreachable.png
+excerpt: "Do you think Java consistently rejects all unreachable code? Well...<br><br><i>Welcome back to the Java-unconfusing series! Usually here we take a look at the pieces of code which may look really
+innocent, but not work as we expect. Or not compile at all. It's good to dive into the reasons why it is a certain way,
+so we can learn more about Java ideology and design decisions.
+Let's get unconfused together!</i>"
 ---
 Do you think Java consistently rejects all unreachable code? Well...
 

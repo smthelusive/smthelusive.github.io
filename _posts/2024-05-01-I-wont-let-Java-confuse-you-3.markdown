@@ -94,8 +94,8 @@ we would have gotten a warning, but compiler would have accepted it anyway.
 There are different use-cases of widening primitive conversion. Often it is happening when one of the values in a single operation is of a wider type,
 so the other value is widened to match.
 
-Only when the operation involves `short` or `byte` values, they are always converted to `int`. 
-There is simply no means of dealing with `short` or `byte` types on the bytecode level.
+Also, `short`, `byte`, `char` and `boolean` values are always converted to `int` under the hood. 
+There is simply no means of dealing with these types on the bytecode level.
 
 ### Short doesn't exist?
 It's a good question. 

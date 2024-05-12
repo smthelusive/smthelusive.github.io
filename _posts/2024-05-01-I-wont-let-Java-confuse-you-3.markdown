@@ -14,8 +14,8 @@ Today, I would like to talk about 'widening'...
 ### Example
 Assume we have two `short` values and we'd like to calculate their sum. It would make sense to write the following piece of code:
 {% highlight java %}
-short a = 10000 ;
-short b = 20000 ;
+short a = 10000;
+short b = 20000;
 short c = a + b;
 {% endhighlight %}
 
@@ -23,8 +23,8 @@ However, this code does not compile. Java compiler considers the result of this 
 We could, of course, cast the result to `short`, successfully compile it and get the expected result:
 
 {% highlight java %}
-short a = 10000 ;
-short b = 20000 ;
+short a = 10000;
+short b = 20000;
 short c = (short)(a + b); // c == 30000
 {% endhighlight %}
 
@@ -58,8 +58,8 @@ Why is this happening in this case? There are simply no bytecode instructions wh
 If we write our original code without any casting, but make our variables `final`, there is no problem compiling that!
 
 {% highlight java %}
-final short a = 10000 ;
-final short b = 20000 ;
+final short a = 10000;
+final short b = 20000;
 short c = a + b;
 {% endhighlight %}
 
@@ -82,8 +82,8 @@ In this case, compiler could calculate the sum and see that the resulting value 
 If we do a slight change to our code so the sum wouldn't fit into a `short` type, the compiler immediately starts to complain:
 
 {% highlight java %}
-final short a = 20000 ;
-final short b = 20000 ;
+final short a = 20000;
+final short b = 20000;
 short c = a + b; // won't compile, because 40000 doesn't fit in 2 bytes
 {% endhighlight %}
 

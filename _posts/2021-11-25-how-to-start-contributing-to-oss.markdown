@@ -63,4 +63,3 @@ In any case, it’s definitely worth trying. Good luck!
 [ammonite-github]: https://github.com/com-lihaoyi/Ammonite
 [up-for-grabs]: https://up-for-grabs.net/
 [stack-overflow]: https://stackoverflow.com/
-

@@ -21,25 +21,12 @@
     <div style="float: right;margin-top:10px;">
         <a style="margin-right: 10px;" href="/" class="menu-button">blog</a>
         <a style="margin-right: 10px;" href="/talks" class="menu-button">talks</a>
-<!--        <a style="margin-right: 10px;" href="/gallery" class="menu-button">gallery</a>-->
         <a style="margin-right: 10px;" href="/about" class="menu-button">about</a>
 <!--        <a style="margin-right: 10px;" href="/resources" class="menu-button">resources</a>-->
         <a style="margin-right: 10px;" href="/comics" class="menu-button">other</a>
     </div>
-    <div class="page-header" role="banner">
-        <a  class="header-link" href="/">
-            <img src="/assets/images/curious_engineer_duke.png" height="150" style="opacity:95%;"/>
-        </a>
-        {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-        {% endif %}
-    </div>
 </header>
-<main id="content" class="main-content" role="main">
-    {{ content }}
-</main>
-
-<footer class="site-footer">
+{{ content }}
     <div class="parent">
         <div style="margin-top: 10px;">
             <a  href="https://linkedin.com/in/nataliia-dziubenko-341919b8">
@@ -52,10 +39,9 @@
                 <img class="contact-image" src="/assets/images/contacts/github.svg" width=40px">
             </a>
         </div>
-        <div style="margin-top: 10px; padding-bottom: 10px;">
+        <div style="margin-top: 10px; padding-bottom: 10px;color:#ECECEB;opacity: 0.7;">
             <span>Nataliia Dziubenko  •  2020 - 2024</span>
         </div>
     </div>
-</footer>
 </body>
 </html>

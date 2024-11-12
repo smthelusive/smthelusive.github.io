@@ -8,7 +8,7 @@ permalink: /comics/
     color: #ECECEB;
     font-family: 'QuickSand', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 30px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -41,6 +41,15 @@ permalink: /comics/
     margin-bottom: 30px; 
 }
 </style>
+
+<div>
+  <div class="container">
+    <a style="text-decoration:none;" href="/comics/awesome_testing">
+        <img src="/assets/images/awesome_testing/1-1.png" alt="testing" class="image"/>
+        <div class="title">Awesome Testing</div>
+    </a>
+  </div>
+</div>
 
 <div>
   <div class="container">

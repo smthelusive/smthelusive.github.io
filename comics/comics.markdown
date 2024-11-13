@@ -6,39 +6,40 @@ permalink: /comics/
 <style>
 .title {
     color: #ECECEB;
-    font-family: 'QuickSand', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
     font-size: 30px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0);
     cursor: pointer;
     position: absolute;
-    top: 0;
+    bottom: 0pt;
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1%;
-    text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;  
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
 }
 
 .image {
     object-fit: cover;
-    height: auto; /* Maintains the aspect ratio */
+    height: auto;
     transition: transform 0.3s ease;
+    filter: brightness(90%);
 }
 
 .container:hover .image {
     transform: scale(1.02);
+filter: brightness(100%);
 }
 
 .container {
     width: 400pt;
-    display: flex;
-    align-items: center;
     position: relative;
-    top: 20px;
     margin: 0 auto;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 </style>
 
@@ -46,7 +47,7 @@ permalink: /comics/
   <div class="container">
     <a style="text-decoration:none;" href="/comics/awesome_testing">
         <img src="/assets/images/awesome_testing/1-1.png" alt="testing" class="image"/>
-        <div class="title">Awesome Testing</div>
+        <p class="title">Awesome Testing</p>
     </a>
   </div>
 </div>
@@ -55,7 +56,7 @@ permalink: /comics/
   <div class="container">
     <a style="text-decoration:none;" href="/comics/debugging_underworld">
         <img src="/assets/images/debugging_underworld/2.png" alt="underworld" class="image"/>
-        <div class="title">Debugging Underworld</div>
+        <p class="title">Debugging Underworld</p>
     </a>
   </div>
 </div>

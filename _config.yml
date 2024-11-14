@@ -5,7 +5,8 @@ blog_description:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://nataliiadziubenko.com # the base hostname & protocol for your site, e.g. http://example.com
 paginate: 10
-
+include:
+  - .well-known
 # Build settings
 theme: minima
 remote_theme: pages-themes/cayman@v0.2.0

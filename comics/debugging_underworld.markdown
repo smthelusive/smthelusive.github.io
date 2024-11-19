@@ -17,6 +17,7 @@ permalink: comics/debugging_underworld/
         <img src="/assets/images/debugging_underworld/10.png" width="2000"/>
         <img src="/assets/images/debugging_underworld/11.png" width="2000"/>
         <img src="/assets/images/debugging_underworld/12.png" width="2000"/>
+        <img src="/assets/images/debugging_underworld/13.png" width="2000"/>
         <h3 style="color:#ECECEB;opacity: 0.7;margin-top: 50px; text-align: center;">to be continued...</h3>
     <div style="float: center; margin-top: 20px">
         <a href="https://hits.sh/nataliiadziubenko.com/debugging_underworld">

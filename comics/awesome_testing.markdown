@@ -1,6 +1,7 @@
 ---
 layout: default-no-bars
 permalink: comics/awesome_testing/
+image: /assets/images/awesome_testing/1-1.png
 ---
 <body style="background:#4b4985;">
     <main id="content" class="main-content" role="main">

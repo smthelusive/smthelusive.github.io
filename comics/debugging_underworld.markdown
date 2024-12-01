@@ -1,7 +1,7 @@
 ---
 layout: default-no-bars
 permalink: comics/debugging_underworld/
-image: /assets/images/thumbnails/debugging_underworld/2.png
+image: /assets/images/debugging_underworld/2.png
 ---
 <body style="background:#1b4c86;">
     <main id="content" class="main-content" role="main">

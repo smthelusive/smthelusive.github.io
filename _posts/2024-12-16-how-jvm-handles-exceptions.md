@@ -5,6 +5,8 @@ date:   2024-12-16 00:00:00 +0200
 image: /assets/images/thumbnails/try-catch-finally.png
 excerpt: "It's interesting to know how the JVM runs bytecode instructions... But do you know what is going on when an exception is thrown? How does JVM handle the delegation of control? What does it look like in the bytecode?"
 ---
+<a href="url"><img src="/assets/images/thumbnails/try-catch-finally.png" width="600" height="auto" style="border-radius:2%"></a>
+
 It's interesting to know how the JVM runs bytecode instructions... But do you know what is going on when an exception is thrown? How does the JVM handle the delegation of control? What does it look like in the bytecode?
 
 Let me quickly show you!

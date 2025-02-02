@@ -3,7 +3,8 @@ layout: post
 title:  "Java's synchronized explained"
 date:   2025-02-02 00:00:00 +0200
 image: /assets/images/thumbnails/synchronized.png
-excerpt: "...I've read those specs and looked inside, so here's a simple little explanation of how synchronized works in the JVM, based on some Java examples..."
+excerpt: "There's a ton of documentation and specifications describing the internal workings of the JVM. However, going through all of that
+to simply gain some understanding might be a bit too much. I've read those specs and looked inside, so here's a simple little explanation of how `synchronized` works in Java..."
 ---
 
 There's a ton of documentation and specifications describing the internal workings of the JVM. However, going through all of that

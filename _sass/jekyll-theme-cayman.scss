@@ -476,3 +476,25 @@ a {
 .contact-image {
   opacity:0.6;
 }
+
+.bmc-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(92, 46, 126, 0.3);
+    color: gray;
+    padding: 10px 12px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+.bmc-button:hover {
+    color: lightgray;
+    background-color: rgba(92, 46, 126, 0.5);
+}

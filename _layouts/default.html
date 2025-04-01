@@ -18,6 +18,11 @@
     {% include head-custom.html %}
 </head>
 <body>
+<script>
+    function countVisit(event) {
+        new Image().src = 'https://hits.sh/nataliiadziubenko.com/bmc-hits.svg';
+    }
+</script>
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 <header>
     <div style="float: right;margin-top:10px;">
@@ -26,7 +31,7 @@
         <a style="margin-right: 10px;" href="/comics" class="menu-button">comics</a>
 
         <!--        <a style="margin-right: 10px;" href="/gallery" class="menu-button">gallery</a>-->
-        <a style="margin-right: 8px;" href="https://buymeacoffee.com/nataliiadziubenko" class="menu-button">
+        <a style="margin-right: 8px;" href="https://buymeacoffee.com/nataliiadziubenko" class="menu-button" onclick="countVisit(event)">
             support <span class="fas fa-lg" style="transform: scale(0.94); vertical-align: 2.1px;">☕</span>
         </a>
         <a style="margin-right: 10px;" href="/about" class="menu-button">about</a>

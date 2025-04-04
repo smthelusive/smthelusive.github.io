@@ -20,7 +20,9 @@
 <body>
 <script>
     function countVisit(event) {
-        new Image().src = 'https://hits.sh/nataliiadziubenko.com/bmc-hits.svg';
+        if (event.pointerType && (event.pointerType == "mouse" && event.pointerType == "touch")) {
+            new Image().src = 'https://hits.sh/nataliiadziubenko.com/bmc-hits.svg';
+        }
     }
 </script>
 <a id="skip-to-content" href="#content">Skip to the content.</a>

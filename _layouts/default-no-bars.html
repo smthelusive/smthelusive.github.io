@@ -13,15 +13,26 @@
     <link rel="icon" href="/assets/images/logo/logo-gradient-duke-3.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo/logo-gradient-duke-3.png">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     {% include head-custom.html %}
 </head>
 <body>
+<script>
+    function countVisit(event) {
+        if (event.pointerType && (event.pointerType == "mouse" && event.pointerType == "touch")) {
+            new Image().src = 'https://hits.sh/nataliiadziubenko.com/bmc-hits.svg';
+        }
+    }
+</script>
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 <header>
     <div style="float: right;margin-top:10px;">
         <a style="margin-right: 10px;" href="/" class="menu-button">blog</a>
         <a style="margin-right: 10px;" href="/talks" class="menu-button">talks</a>
         <a style="margin-right: 10px;" href="/comics" class="menu-button">comics</a>
+        <a style="margin-right: 8px;" href="https://buymeacoffee.com/nataliiadziubenko" class="menu-button" onclick="countVisit(event)">
+            support <span class="fas fa-lg" style="transform: scale(0.94); vertical-align: 2.1px;">☕</span>
+        </a>
         <a style="margin-right: 10px;" href="/about" class="menu-button">about</a>
 <!--        <a style="margin-right: 10px;" href="/resources" class="menu-button">resources</a>-->
     </div>

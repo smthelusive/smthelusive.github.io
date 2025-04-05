@@ -7,6 +7,7 @@ url: https://nataliiadziubenko.com # the base hostname & protocol for your site,
 paginate: 10
 include:
   - .well-known
+  - ads.txt
 # Build settings
 theme: minima
 remote_theme: pages-themes/cayman@v0.2.0

@@ -43,3 +43,7 @@ $font-mono: 'IBM Plex Mono', Consolas, "Liberation Mono", Menlo, monospace;
 // Wobbly hand-drawn borders
 $hand-radius: unquote("255px 15px 225px 15px / 15px 225px 15px 255px");
 $hand-radius-small: unquote("255px 12px 225px 12px / 12px 225px 12px 255px");
+
+// One shadow for everything that sits on the page like paper
+$paper-shadow: 4px 5px 0 var(--shadow);
+$paper-shadow-small: 3px 3px 0 var(--shadow);

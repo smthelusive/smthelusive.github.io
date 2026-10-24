@@ -173,13 +173,20 @@ a {
   align-items: center;
   min-height: 44px;
   padding: 0 18px;
-  font-family: $font-pixel;
-  font-size: 15px;
+  font-family: $font-mono;
+  font-weight: 500;
+  font-size: 16px;
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.55);
+  border: 2px solid transparent;
   border-radius: $hand-radius;
 
-  &:hover,
+  &:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.16);
+    border-color: #fff;
+    text-decoration: none;
+  }
+
   &.active {
     color: $purple;
     background: #fff;
@@ -188,38 +195,20 @@ a {
   }
 
   @include small {
-    font-size: 13px;
+    font-size: 14px;
     padding: 0 12px;
   }
 }
 
 .nav-coffee {
   gap: 8px;
-  margin-left: 6px;
-  color: $ink;
-  background: $peach;
-  border: 2.5px solid $ink;
-  box-shadow: 3px 3px 0 rgba(26, 26, 26, 0.35);
-  transform: rotate(-1.5deg);
-  transition: transform 0.15s;
 
   svg path {
     fill: none;
-    stroke: $ink;
+    stroke: currentColor;
     stroke-width: 1.8;
     stroke-linecap: round;
     stroke-linejoin: round;
-  }
-
-  &:hover {
-    color: $ink;
-    background: #fff;
-    border-color: $ink;
-    transform: rotate(0) translateY(-2px);
-  }
-
-  @include small {
-    margin-left: 0;
   }
 }
 
@@ -239,10 +228,6 @@ a {
   }
 
   .icon-sun { display: none; }
-
-  &:hover {
-    color: $purple;
-  }
 }
 
 @mixin theme-toggle-dark {
@@ -305,7 +290,8 @@ a {
   }
 }
 
-.header-wave {
+.header-wave,
+.band-wave {
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -325,6 +311,63 @@ a {
 
   @include small {
     height: 28px;
+  }
+}
+
+// Inner pages: title and nav share one row
+.site-header-compact {
+  padding: 14px 24px 32px;
+
+  @include small {
+    padding-bottom: 24px;
+  }
+
+  .header-wave {
+    height: 22px;
+
+    @include small {
+      height: 14px;
+    }
+  }
+
+  .site-title {
+    font-size: 17px;
+  }
+
+  .site-nav {
+    margin: 0;
+    gap: 4px;
+  }
+
+  .nav-button {
+    padding: 0 12px;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.byline {
+  font-family: $font-mono;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.compact-row {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+
+  @include small {
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -368,22 +411,31 @@ a {
   align-items: center;
   min-height: 44px;
   padding: 0 20px;
-  font-family: $font-pixel;
-  font-size: 15px;
+  font-family: $font-mono;
+  font-weight: 500;
+  font-size: 16px;
   color: $navy;
   background: $peach;
   border: 2.5px solid $ink;
   border-radius: $hand-radius;
+  box-shadow: $paper-shadow-small;
+  transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
 
   &:hover {
-    color: $purple;
-    background: #fff;
+    color: $navy;
+    background: #FAD3A6;
     text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: $paper-shadow;
   }
 }
 
 .hand-button-blue {
   background: $blue;
+
+  &:hover {
+    background: #79B0C2;
+  }
 }
 
 .chip {
@@ -394,7 +446,7 @@ a {
   color: var(--accent);
   background: var(--chip-bg);
   padding: 1px 8px;
-  border-radius: 999px;
+  border-radius: $hand-radius-small;
 }
 
 .tape {
@@ -439,6 +491,7 @@ a {
   background: var(--surface);
   border: 2.5px solid var(--ink);
   border-radius: $hand-radius-small;
+  box-shadow: $paper-shadow;
   transition: transform 0.15s;
 
   &:nth-child(3n+1) { transform: rotate(-0.9deg); }
@@ -515,10 +568,34 @@ a {
 }
 
 .comics-band {
-  margin-top: 72px;
-  padding: 72px 0 80px;
+  position: relative;
+  margin-top: 96px;
+  padding: 88px 0 104px;
   color: #fff;
-  background: var(--band);
+  background-color: var(--header-to);
+  background-image: linear-gradient(120deg, var(--header-to) 25%, var(--header-from));
+
+  .band-wave {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 44px;
+
+    @include small {
+      height: 28px;
+    }
+  }
+
+  .band-wave-top {
+    top: -1px;
+    bottom: auto;
+    transform: scaleY(-1);
+  }
+
+  .band-wave-bottom {
+    bottom: -1px;
+  }
 
   .container {
     display: flex;
@@ -537,7 +614,7 @@ a {
 
   p {
     margin: 0;
-    color: #D6E6EC;
+    color: rgba(255, 255, 255, 0.85);
   }
 }
 
@@ -565,6 +642,10 @@ a {
 
   a:first-child { transform: rotate(-1.5deg); }
   a:last-child  { transform: rotate(1.2deg); margin-top: 36px; }
+  a:last-child .tape {
+    background: rgba(159, 115, 171, 0.8);
+    transform: rotate(2.5deg);
+  }
 
   @include small {
     grid-template-columns: 1fr;
@@ -574,11 +655,16 @@ a {
 }
 
 .comic-panel {
+  position: relative;
   display: block;
   border: 4px solid $ink;
   background: $ink;
-  box-shadow: 6px 7px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: $paper-shadow;
   transition: transform 0.2s;
+
+  .tape {
+    z-index: 1;
+  }
 
   img {
     display: block;
@@ -600,7 +686,7 @@ a {
   background: var(--surface);
   border: 2.5px solid var(--ink);
   border-radius: $hand-radius-small;
-  box-shadow: 5px 6px 0 var(--shadow);
+  box-shadow: $paper-shadow;
 
   @include small {
     padding: 32px 18px 28px;
@@ -707,8 +793,8 @@ a {
     word-wrap: normal;
     background-color: var(--code-bg);
     border: 2px solid var(--ink);
-    border-radius: 8px;
-    box-shadow: 3px 3px 0 var(--shadow);
+    border-radius: $hand-radius-small;
+    box-shadow: $paper-shadow-small;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -739,10 +825,12 @@ a {
   }
 
   blockquote {
-    margin: 0 0 1.2rem;
-    padding: 4px 0 4px 18px;
-    color: var(--accent);
-    border-left: 4px solid $lilac;
+    margin: 0 0 1.4rem;
+    padding: 14px 20px;
+    color: var(--text);
+    background: var(--chip-bg);
+    border: 2px dashed $lilac;
+    border-radius: $hand-radius-small;
 
     > :first-child { margin-top: 0; }
     > :last-child { margin-bottom: 0; }
@@ -806,7 +894,7 @@ a {
   background: var(--surface);
   border: 2.5px solid var(--ink);
   border-radius: $hand-radius-small;
-  box-shadow: 5px 6px 0 var(--shadow);
+  box-shadow: $paper-shadow;
 
   &:nth-child(3n+1) { transform: rotate(-0.8deg); }
   &:nth-child(3n+2) { transform: rotate(0.6deg); }
@@ -842,7 +930,7 @@ a {
   padding-top: 56.25%;
   background: $ink;
   border: 2px solid $ink;
-  border-radius: 6px;
+  border-radius: $hand-radius-small;
   overflow: hidden;
 
   iframe,
@@ -955,7 +1043,8 @@ a.note-card {
   }
 
   strong {
-    font-family: $font-pixel;
+    font-family: $font-mono;
+    font-weight: 600;
     font-size: 15px;
     color: var(--accent);
   }
@@ -978,8 +1067,9 @@ a.note-card {
     align-items: center;
     min-height: 44px;
     padding: 0 16px;
-    font-family: $font-pixel;
-    font-size: 13px;
+    font-family: $font-mono;
+    font-weight: 500;
+    font-size: 15px;
     color: var(--text);
     background: var(--surface);
     border: 2px solid var(--ink);
@@ -1030,7 +1120,7 @@ a.note-card {
   bottom: 24px;
   z-index: 5;
   cursor: pointer;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: $paper-shadow-small;
   opacity: 0;
   pointer-events: none;
   transform: translateY(12px) rotate(-2deg);

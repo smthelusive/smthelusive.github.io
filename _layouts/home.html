@@ -55,6 +55,7 @@ enabled: true
 
     {%- if first_page %}
     <section class="comics-band" aria-label="Comics">
+        {% include wave.html class="band-wave band-wave-top" %}
         <div class="container">
             <div class="comics-text">
                 <h2>meanwhile, in the comics…</h2>
@@ -65,13 +66,16 @@ enabled: true
             </div>
             <div class="comics-panels">
                 <a class="comic-panel" href="/comics/debugging_underworld">
+                    <span class="tape"></span>
                     <img src="/assets/images/debugging_underworld/1.png" alt="Comic panel: a developer in a dim brick dungeon says &quot;this doesn't look right&quot;" loading="lazy">
                 </a>
                 <a class="comic-panel" href="/comics/awesome_testing">
+                    <span class="tape"></span>
                     <img src="/assets/images/awesome_testing/1-1.png" alt="Comic panel: the developer thinks &quot;we don't have tests for this service&quot;" loading="lazy">
                 </a>
             </div>
         </div>
+        {% include wave.html class="band-wave band-wave-bottom" %}
     </section>
     {%- endif %}
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

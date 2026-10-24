@@ -17,7 +17,6 @@ Throughout my career, I had a chance to work with diverse technologies, but my b
 Luckily I work at Azul, which is the only company 100% focused on Java 😃
 I'm a backend engineer who likes to poke my nose into the lower level concepts and how things work under the hood.
 Together with Jasper Dijt, I also run [FrozenBits IT](https://frozenbits.se), a small consultancy for backend, JVM and cloud work.
-Under the same name we make [Furdoku](https://frozenbits.se/furdoku/), a sudoku-style puzzle game for iPhone with animals instead of numbers.
 
 Also, I'm building fun pet projects from time to time, which help me learn.
 Some examples are: a toy programming language on JVM, or a debugger for the JVM bytecode.
@@ -26,7 +25,6 @@ In summary, most of my insights come from playing with things and digging (at ti
 
 Sometimes I talk at the Java User Groups and conferences about fun things that I learn.
 But mostly I like to write about it, that’s why this blog exists.
-And... you might find alternative formats of content on this website soon, because why not!
 
 If you're curious, [here you can find some of my talks]({{ site.baseurl }}{% link talks.markdown %})
 and some of my other work, such as a [Java magazine article](https://www.flipsnack.com/558F85AA9F7/jam03-23-7u8g5l3tk5/full-view.html?p=6)

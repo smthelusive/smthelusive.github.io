@@ -1,0 +1,33 @@
+<script>
+    function toggleTheme() {
+        var root = document.documentElement;
+        var current = root.getAttribute('data-theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+    }
+
+    function countVisit(event) {
+        if (event.pointerType == "mouse" || event.pointerType == "touch") {
+            new Image().src = 'https://hits.sh/nataliiadziubenko.com/bmc-hits.svg';
+        }
+    }
+</script>
+<a id="skip-to-content" href="#content">Skip to the content.</a>
+{%- assign url_parts = page.url | split: '/' -%}
+{%- assign section = url_parts[1] -%}
+<nav class="site-nav" aria-label="Main">
+    <a href="/" class="nav-button{% unless section == 'talks' or section == 'comics' or section == 'about' %} active{% endunless %}">blog</a>
+    <a href="/talks" class="nav-button{% if section == 'talks' %} active{% endif %}">talks</a>
+    <a href="/comics" class="nav-button{% if section == 'comics' %} active{% endif %}">comics</a>
+    <a href="/about" class="nav-button{% if section == 'about' %} active{% endif %}">about</a>
+    <a href="https://buymeacoffee.com/nataliiadziubenko" class="nav-button nav-coffee" onclick="countVisit(event)">
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M5 9.5 C 5 9, 16 8.6, 16.5 9.2 C 16.8 12, 16.4 16.5, 14 18.6 C 12.4 19.8, 8.6 19.7, 7.1 18.5 C 5.1 16.6, 4.8 12.4, 5 9.5 Z M16.4 11 C 19.6 10.4, 20.4 13.6, 17.8 15 C 17.2 15.3, 16.4 15.4, 15.8 15.2 M8.2 6.6 C 7.4 5.4, 9 4.6, 8.4 3.2 M11.4 6.6 C 10.6 5.4, 12.2 4.6, 11.6 3.2"/></svg>
+        buy me a coffee
+    </a>
+    <button type="button" class="nav-button theme-toggle" onclick="toggleTheme()" aria-label="Switch between light and dark mode">
+        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M20 14.5 A 8.5 8.5 0 1 1 9.5 4 A 6.8 6.8 0 0 0 20 14.5 Z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5 V5 M12 19 V21.5 M2.5 12 H5 M19 12 H21.5 M5.3 5.3 L7 7 M17 17 L18.7 18.7 M5.3 18.7 L7 17 M17 7 L18.7 5.3"/></svg>
+    </button>
+</nav>

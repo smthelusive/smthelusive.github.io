@@ -2,32 +2,44 @@
 $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
 
-// Headers
-$header-heading-color: #ECECEB !default;
-$header-bg-color: #5C2E7E !default;
-$header-bg-color-secondary: #8BBCCC !default;
-$background-color: #F1EEE9 !default;
+// Palette
+$purple: #5C2E7E;
+$purple-dark: #3B1A55;
+$blue: #8BBCCC;
+$lilac: #9F73AB;
+$navy: #0F3460;
+$paper: #F1EEE9;
+$peach: #FCE3C5;    // comic speech bubbles
+$ink: #1A1A1A;      // comic outlines
+$muted-text: #4D5F7D;
+$body-soft: #33465F;
+
+// Header
+$header-heading-color: #FFFFFF;
+$header-bg-color: $purple;
+$header-bg-color-secondary: $blue;
+$background-color: $paper;
 
 // Text
-$section-headings-color: #5C2E7E !default;
-$body-text-color: #0F3460 !default;
-$body-link-color: #8BBCCC !default;
-$blockquote-text-color: #9F73AB !default;
+$section-headings-color: $purple;
+$body-text-color: $navy;
+$body-link-color: $purple;
+$blockquote-text-color: $purple;
 
 // Code
-$code-bg-color: #d7d7d7 !default;
-$code-text-color: #5C2E7E !default;
+$code-bg-color: #FBF9F4;
+$code-text-color: $navy;
 
 // Borders
-$border-color: #dce6f0 !default;
-$table-border-color: #e9ebec !default;
-$hr-border-color: #eff0f1 !default;
-$post-border-color: #D3D3D3;
+$border-color: rgba(15, 52, 96, 0.25);
+$table-border-color: rgba(15, 52, 96, 0.2);
+$hr-border-color: rgba(15, 52, 96, 0.25);
 
-// Buttons
-$button-text-color: #818181;
-$menu-button-color: #D3D3D3;
+// Fonts
+$font-body: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-pixel: 'Silkscreen', 'Courier New', monospace;
+$font-mono: 'IBM Plex Mono', Consolas, "Liberation Mono", Menlo, monospace;
 
-
-// 15133C 73777B EC994B F1EEE9
-// ECECEB F9A828 07617D 2E383F
+// Wobbly hand-drawn borders
+$hand-radius: unquote("255px 15px 225px 15px / 15px 225px 15px 255px");
+$hand-radius-small: unquote("255px 12px 225px 12px / 12px 225px 12px 255px");

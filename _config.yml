@@ -2,9 +2,10 @@ title: Nataliia Dziubenko
 description: Blog
 blog_description:
   Curiosity brings us to a beautiful journey. Let's share this journey together.
+header_tagline: poking my nose into how things work under the hood
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://nataliiadziubenko.com # the base hostname & protocol for your site, e.g. http://example.com
-paginate: 10
+paginate: 12
 include:
   - .well-known
   - ads.txt

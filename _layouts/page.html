@@ -1,15 +1,29 @@
 ---
 layout: default
 ---
-
-<article class="post">
-
+{%- if page.sheet == false %}
+<div class="container">
+    {%- if page.title %}
+    <div class="section-heading">
+        <h1 class="hand-heading">{{ page.title | escape }}{% include squiggle.html %}</h1>
+    </div>
+    {%- endif %}
+    {{ content }}
+</div>
+{%- else %}
+<div class="container container-narrow">
+<article class="post sheet">
+    <span class="tape"></span>
+    {%- if page.title %}
     <header class="post-header">
         <h1 class="post-title">{{ page.title | escape }}</h1>
+        {% include squiggle.html %}
     </header>
+    {%- endif %}
 
     <div class="post-content">
         {{ content }}
     </div>
-
 </article>
+</div>
+{%- endif %}

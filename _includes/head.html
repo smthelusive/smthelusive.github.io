@@ -1,0 +1,25 @@
+    <meta charset="UTF-8">
+    <script>
+        // Apply a saved theme choice before the page paints; otherwise the OS setting decides.
+        try {
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        } catch (e) {}
+    </script>
+    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#5C2E7E" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#3A1C55" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=Silkscreen:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" href="/assets/images/logo/logo-gradient-duke-3.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo/logo-gradient-duke-3.png">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    {% include head-custom.html %}

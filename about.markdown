@@ -4,7 +4,7 @@ title: About the author
 permalink: /about/
 ---
 <p align="center">
-    <img src="/assets/images/nataliia.png" width="200" style="border-radius:50%"/>
+    <img class="profile-photo" src="/assets/images/nataliia.png" alt="Portrait of Nataliia"/>
 </p>
 
 Hey!
@@ -16,6 +16,9 @@ Throughout my career, I had a chance to work with diverse technologies, but my b
 
 Luckily I work at Azul, which is the only company 100% focused on Java 😃
 I'm a backend engineer who likes to poke my nose into the lower level concepts and how things work under the hood.
+Together with Jasper Dijt, I also run [FrozenBits IT](https://frozenbits.se), a small consultancy for backend, JVM and cloud work.
+Under the same name we make [Furdoku](https://frozenbits.se/furdoku/), a sudoku-style puzzle game for iPhone with animals instead of numbers.
+
 Also, I'm building fun pet projects from time to time, which help me learn.
 Some examples are: a toy programming language on JVM, or a debugger for the JVM bytecode.
 

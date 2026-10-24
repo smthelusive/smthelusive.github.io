@@ -1,79 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
-
-    {% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="icon" href="/assets/images/logo/logo-gradient-duke-3.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo/logo-gradient-duke-3.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    {% include head-custom.html %}
+{% include head.html %}
 </head>
 <body>
-<script>
-    function countVisit(event) {
-        if (event.pointerType && (event.pointerType == "mouse" && event.pointerType == "touch")) {
-            new Image().src = 'https://hits.sh/nataliiadziubenko.com/bmc-hits.svg';
-        }
-    }
-</script>
-<a id="skip-to-content" href="#content">Skip to the content.</a>
-<header>
-    <div style="float: right;margin-top:10px;">
-        <a style="margin-right: 10px;" href="/" class="menu-button">blog</a>
-        <a style="margin-right: 10px;" href="/talks" class="menu-button">talks</a>
-        <a style="margin-right: 10px;" href="/comics" class="menu-button">comics</a>
-
-        <!--        <a style="margin-right: 10px;" href="/gallery" class="menu-button">gallery</a>-->
-        <a style="margin-right: 8px;" href="https://buymeacoffee.com/nataliiadziubenko" class="menu-button" onclick="countVisit(event)">
-            support <span class="fas fa-lg" style="transform: scale(0.94); vertical-align: 2.1px;">☕</span>
-        </a>
-        <a style="margin-right: 10px;" href="/about" class="menu-button">about</a>
-<!--        <a style="margin-right: 10px;" href="/resources" class="menu-button">resources</a>-->
-
-<!--        <a href="https://buymeacoffee.com/nataliiadziubenko" class="bmc-button">-->
-<!--            <span class="fas fa-lg">☕</span>-->
-<!--        </a>-->
+<header class="site-header">
+    {% include nav.html %}
+    <div class="header-title">
+        <a href="/" class="site-title">Software Development Adventures</a>
+        <p class="tagline">by Nataliia Dziubenko · {{ site.header_tagline }}</p>
     </div>
-
-    <div class="page-header" role="banner">
-        <a  class="header-link" href="/">
-            <img src="/assets/images/curious_engineer_duke.png" height="150" style="opacity:95%;"/>
-        </a>
-        {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-        {% endif %}
-    </div>
+    <svg class="header-wave" aria-hidden="true" viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path class="wave-fill" d="M0 40 C 90 18, 170 58, 260 38 S 430 12, 520 36 S 690 62, 790 34 S 960 10, 1060 38 S 1240 60, 1330 32 S 1420 22, 1440 30 L 1440 72 L 0 72 Z"/>
+        <path class="wave-line" d="M0 40 C 90 18, 170 58, 260 38 S 430 12, 520 36 S 690 62, 790 34 S 960 10, 1060 38 S 1240 60, 1330 32 S 1420 22, 1440 30"/>
+    </svg>
 </header>
-<main id="content" class="main-content" role="main">
+<main id="content" class="main-content">
     {{ content }}
 </main>
-
-<footer class="site-footer">
-    <div class="parent">
-        <div style="margin-top: 10px;">
-            <a  href="https://linkedin.com/in/nataliia-dziubenko-341919b8">
-                <img class="contact-image" src="/assets/images/contacts/linkedin.svg" width=40px">
-            </a>
-            <a  href="https://twitter.com/worth_exploring">
-                <img class="contact-image" src="/assets/images/contacts/twitter.svg" width=40px">
-            </a>
-            <a  href="https://github.com/smthelusive">
-                <img class="contact-image" src="/assets/images/contacts/github.svg" width=40px">
-            </a>
-        </div>
-        <div style="margin-top: 10px; padding-bottom: 10px;">
-            <span>Nataliia Dziubenko  •  2020 - 2025</span>
-        </div>
-    </div>
-</footer>
+{% include footer.html %}
 </body>
 </html>

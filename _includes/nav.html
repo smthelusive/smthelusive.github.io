@@ -1,11 +1,17 @@
 <script>
     function toggleTheme() {
         var root = document.documentElement;
-        var current = root.getAttribute('data-theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var osTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var current = root.getAttribute('data-theme') || osTheme;
         var next = current === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) {}
+        // Only remember a choice that overrides the OS setting.
+        if (next === osTheme) {
+            root.removeAttribute('data-theme');
+            try { localStorage.removeItem('theme'); } catch (e) {}
+        } else {
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        }
     }
 
     function countVisit(event) {

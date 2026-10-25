@@ -6,6 +6,11 @@
             if (savedTheme === 'light' || savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', savedTheme);
             }
+            // When the OS setting changes, it wins over the saved choice again.
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+                document.documentElement.removeAttribute('data-theme');
+                try { localStorage.removeItem('theme'); } catch (e) {}
+            });
         } catch (e) {}
     </script>
     <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">

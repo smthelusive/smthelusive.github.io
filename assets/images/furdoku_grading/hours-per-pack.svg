@@ -1,0 +1,20 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 340' width='800' height='340'>
+<rect width='800' height='340' fill='#fcfcfb'/>
+<text x='20' y='36' font-size='20' fill='#0b0b0b' text-anchor='start' font-weight='600' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>43.2 hours just for the puzzles that shipped</text>
+<text x='20' y='60' font-size='14' fill='#52514e' text-anchor='start' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>Time per pack for the final 480 puzzles. The ones I removed along the way aren't counted.</text>
+<text x='178' y='109' font-size='14' fill='#0b0b0b' text-anchor='end' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>Pets</text>
+<path d='M190,94 h426.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-426.0 z' fill='#2a78d6'/>
+<text x='628.0' y='109' font-size='13' fill='#52514e' text-anchor='start' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>14.3 h · 150 puzzles</text>
+<text x='178' y='153' font-size='14' fill='#0b0b0b' text-anchor='end' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>Monsters</text>
+<path d='M190,138 h382.0348083399848 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-382.0348083399848 z' fill='#2a78d6'/>
+<text x='584.0348083399848' y='153' font-size='13' fill='#52514e' text-anchor='start' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>12.8 h · 150 puzzles</text>
+<text x='178' y='197' font-size='14' fill='#0b0b0b' text-anchor='end' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>Wolf, Goat &amp; Cabbage</text>
+<path d='M190,182 h210.10010317908385 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-210.10010317908385 z' fill='#2a78d6'/>
+<text x='412.1001031790838' y='197' font-size='13' fill='#52514e' text-anchor='start' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>7.1 h · 60 puzzles</text>
+<text x='178' y='241' font-size='14' fill='#0b0b0b' text-anchor='end' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>Christmas</text>
+<path d='M190,226 h148.739696692429 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-148.739696692429 z' fill='#2a78d6'/>
+<text x='350.739696692429' y='241' font-size='13' fill='#52514e' text-anchor='start' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>5.1 h · 60 puzzles</text>
+<text x='178' y='285' font-size='14' fill='#0b0b0b' text-anchor='end' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>Farm</text>
+<path d='M190,270 h116.05042147682364 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-116.05042147682364 z' fill='#2a78d6'/>
+<text x='318.05042147682366' y='285' font-size='13' fill='#52514e' text-anchor='start' font-weight='normal' font-family='-apple-system, Segoe UI, Helvetica, Arial, sans-serif'>4.0 h · 60 puzzles</text>
+</svg>

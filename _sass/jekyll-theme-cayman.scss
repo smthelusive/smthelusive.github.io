@@ -752,6 +752,8 @@ a {
     height: auto;
     background: var(--drawing-bg);
     border-radius: 6px;
+
+    &.no-plate { background: transparent; }  // light drawings that read fine on dark
   }
 
   h1,

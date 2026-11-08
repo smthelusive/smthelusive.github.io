@@ -61,20 +61,30 @@ So what actually makes a puzzle hard?
 
 ### Putting on the scientist pants
 
-I was sure somebody had already researched it before for sudoku puzzles and, possibly, variants. And indeed, I found Andrew Stuart's [paper on grading sudoku](https://www.sudokuwiki.org/Sudoku_Creation_and_Grading.pdf) that helped me a lot.
+My first improvement was counting 'rounds', where, in a nutshell, you count how many rounds of throwing techniques at the grid it takes to solve a puzzle. You end up counting the steps, but not the difficulty of those steps. The time-to-rounds correlation was better, but still weak.
 
-The paper lists dozens of solving techniques ordered by their estimated difficulty. Here are some examples of techniques that were applicable to my variant. Let's continue using the Pets pack as an example:
+I was sure somebody had already researched the problem of grading sudoku puzzles, and possibly variants too. And indeed, I found Andrew Stuart's [paper on grading sudoku](https://www.sudokuwiki.org/Sudoku_Creation_and_Grading.pdf), which helped me a lot.
 
-- hidden singles: if a human can go in exactly one place in a given row/column/box, it goes there even if a dog could go there too.
-- intersection removal: if a box's dog can only go in one line, that line's dog must be in this box, so no other cell in that line can hold a dog.
+The paper lists dozens of solving techniques, ordered by their estimated difficulty. Here are some of the techniques that were applicable to my variant. Let's continue with the Pets pack as an example:
 
-On top of these techniques, there were pack-specific techniques, for example a dog needs a human next to it, so the hardest techniques included ruling out where the dog can't go based on where the human can't ever stand around it. There were a couple of techniques based on this dog-human relationship, and they could have different difficulty. To come to the conclusion which technique was hard I had to get stuck a couple of times for a longer time in a puzzle, so that was mostly subjective. Each technique got a weight assigned to it, which was mostly driven by my playtime measurements, the best data I had in my hands.
+**Hidden singles**: if a human can go in exactly one place in a given row/column/box, it goes there, even if a dog could go there too.
+<figure>
+  <img src="/assets/images/furdoku_grading/tip-hidden-single.png" alt="Hidden single: the box's human has only one cell left">
+</figure>
 
-So, as you remember, the number of clues didn't decide difficulty well. My first improvement was counting 'rounds', where, in a nutshell, you count how many rounds of throwing techniques at the grid it takes to solve a puzzle. The time to rounds correlation looked a bit more promising, but still weak.
+**Intersection removal**: if a box's dog can only go in one line, that line's dog must be in this box, so no other cell in that line can hold a dog.
+<figure>
+  <img src="/assets/images/furdoku_grading/tip-intersection-removal.png" alt="Intersection removal: the box's dog must be in the middle row, so the rest of that row can't hold a dog">
+</figure>
 
-The next step was to adopt technique scoring from the paper. It's when you again go in rounds through the puzzle and accumulate the weights of the easiest technique it takes to get to the next step. The graph improved.
+On top of these, there were pack-specific techniques. For example, a dog needs a human next to it, so if none of the cells around a spot can hold a human, a dog can't go there.
+<figure>
+  <img src="/assets/images/furdoku_grading/tip-dog-needs-human.png" alt="A dog needs a human next to it: no human can stand around the middle cell, so no dog can go there">
+</figure>
 
-Finally, after determining some more of the "custom" techniques, the Spearman score settled at `0.46` for the whole pack.
+There were a couple of techniques based on this dog-human relationship, and they weren't equally hard. To figure out which ones were hard, I had to get properly stuck in a puzzle a few times, so that part was mostly subjective. Each technique got a weight assigned to it, mostly driven by my playtime measurements, the best data I had.
+
+The next step was to adopt technique scoring from the paper. In each round, you add the weight of the easiest technique needed to get to the next round. This time, the difficulty of each step actually matters. After incorporating this and identifying some more "custom" techniques, the Spearman correlation settled at `0.46` for the whole pack (not great, not terrible).
 
 ![My solve time for each of the 150 Pets puzzles against its technique score: higher-scored puzzles tend to take longer](/assets/images/furdoku_grading/technique-vs-time.svg)
 

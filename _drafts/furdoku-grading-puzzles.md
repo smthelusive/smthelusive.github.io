@@ -11,17 +11,17 @@ Let's start with some numbers that made me go "wow" when I learned them. I playt
 
 You might be wondering: wasn't it possible to automate this work? Was it really necessary to playtest everything? Playtesting helped me gather the data that I could use to calibrate my grading logic.
 
-Some of the tested puzzles didn't make it into the release. I often threw away whole batches because the metrics weren't good enough. I had tons of data, but wasn't using it right. I made loads of mistakes before I got to a reliable grading approach. It turned out to be a really difficult problem, one that AI couldn't solve for me, though it definitely helped a lot.
+Some of the tested puzzles didn't make it into the release. I often threw away whole batches because the metrics weren't good enough. I had tons of data, but wasn't using it right. I made loads of mistakes before I got to a grading approach I could trust. It turned out to be a really difficult problem, one that AI couldn't solve for me, though it definitely helped a lot.
 
 ### What is Furdoku?
 
-Ever since I was a kid, I've enjoyed puzzles like sudoku and Minesweeper. Furdoku is a sudoku variant, where you place entities such as sheep, people, dogs, and chickens, following the sudoku rules, meaning you must put exactly one of each entity in every row, column and 3x3 box. On top of that, there are special rules, for example, you can't place sheep near wolves, or you need to place a dog near a human, otherwise it feels lonely, and so on. Many cells stay empty, which invites new techniques for solving these puzzles, such as checking how many cells are taken in a row/column/box to decide that certain cell is definitely empty (it feels like Minesweeper at times). Marking cells as empty is part of the game, this way you eliminate where none of the entities can be placed and rely on this for the next steps.
+Ever since I was a kid, I've enjoyed puzzles like sudoku and Minesweeper. Furdoku is a sudoku variant, where you place entities such as sheep, people, dogs, and chickens, following the sudoku rules, meaning you must put exactly one of each entity in every row, column and 3x3 box. On top of that, there are special rules, for example, you can't place sheep near wolves, or you need to place a dog near a human, otherwise it feels lonely, and so on. Many cells stay empty, which invites new techniques for solving these puzzles, such as checking how many cells are taken in a row/column/box to decide that a certain cell is definitely empty (it feels like Minesweeper at times). Marking cells as empty is part of the game: this way you eliminate where none of the entities can be placed and rely on this for the next steps.
 
 Each pack has its own rules and feels like a slightly different game. Some examples:
 
-**Wolf, Goat & Cabbage:** the old river-crossing riddle in a new form. The wolf eats the goat, the goat eats the cabbage. Place goats and cabbages by sudoku rules, but don't allow anything to get eaten.
+**Wolf, Goat & Cabbage**: the old river-crossing riddle in a new form. The wolf eats the goat, the goat eats the cabbage. Place goats and cabbages by sudoku rules, but don't allow anything to get eaten.
 
-**Pets:** cats like to be on their own, dogs need company. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
+**Pets**: cats like to be on their own, dogs need company. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
 
 <img src="/assets/images/furdoku_grading/ipad-pets-rules.jpg" alt="A Pets puzzle on iPad, with the pack's rules open next to the board" width="560">
 
@@ -33,13 +33,13 @@ Every pack has easy/medium/hard levels, and to determine these levels I needed t
 
 Furdoku is built on my ideas, design, and mechanics. I drew the art for it on my iPad and put a piece of myself into this project. It was implemented using Claude, where I worked with it closely to ensure good code quality and architecture, and made adjustments wherever things looked fishy. Rules and constraints of the puzzles were defined by me, but the puzzles were generated, and they needed quality (solver) and difficulty (grader) evaluation.
 
-I was teaming with Claude very closely while building the grader. A couple of common sudoku techniques are applicable to these puzzles, but they are not exhaustive. So after the basic techniques were covered and the play still felt of a different level than intended, we went through what made puzzles _feel_ hard for me, spotting new techniques, more and more advanced, and incorporating them into our tooling. The prototyping went fast, this was the big strength of AI.
+I was teaming up with Claude very closely while building the grader. A couple of common sudoku techniques are applicable to these puzzles, but they are not exhaustive. So after the basic techniques were covered and puzzles still didn't feel like the level they were graded at, we went through what made puzzles _feel_ hard for me, spotting new techniques, more and more advanced, and incorporating them into our tooling. The prototyping went fast, and that was the big strength of AI.
 
 ### Fewer clues == harder, right?
 
 The starting point for me was the instinct that the more constraints are visible on the board at the start, the easier it is to solve. I wanted to make sure my metrics were somewhat defensible, so I played the puzzles myself and timed each and every one of them (the app does it for you actually) to judge difficulty based on my timing.
 
-Well, here is the example. You place humans and dogs by sudoku rules. Cats like to be on their own, so nothing should be adjacent to them, dogs get sad if there is no human adjacent. The assumption is that the more cats there are at the start, the easier it is to solve the puzzle.
+Well, here is an example from the Pets pack. The assumption is that the more cats there are at the start, the easier it is to solve the puzzle.
 
 Which one do you think took me longer to solve?
 
@@ -48,7 +48,7 @@ Which one do you think took me longer to solve?
   <img src="/assets/images/furdoku_grading/puzzle-a-seven-cats.png" alt="Pets puzzle A, with 7 cats" style="width: calc(50% - 10px);">
 </p>
 
-The one with fewer clues is done in under 2 min, the one with more clues took 8.
+The one with fewer clues took me under 2 min, the one with more clues took 8.
 It turned out that the number of clues didn't matter. I expected a graph telling me otherwise, but the data of solving 150 puzzles in this pack showed there was little to no dependency of my timing on the number of clues ([Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) = `−0.14`, where 0 means "no relationship at all").
 
 ![My solve time for each of the 150 Pets puzzles against its number of cat clues: no visible relationship](/assets/images/furdoku_grading/clues-vs-time.svg)
@@ -114,7 +114,7 @@ At the start, each pack was like a new game. I was working out the logic, and ev
 
 So I had to change the way I used my times. At that point I had a lot more trust in my grader, because it was backed by science (yeah, right), so my times became supporting information. The puzzles that only need the easiest techniques go to the easy tier, the ones that need advanced techniques can't go there. Outside of that, sort them by my time.
 
-The last pack I made was a Christmas pack (v. 1.0.1), and it's a good illustration. In the final version, the easy puzzles took me slightly longer on average than the medium ones, but they stayed in easy because of the techniques they needed.
+The last pack I made was a Christmas pack (coming in the next update), and it's a good illustration. In the final version, the easy puzzles took me slightly longer on average than the medium ones, but they stayed in easy because of the techniques they needed.
 
 ![My solve time for each of the 60 Christmas puzzles by shipped tier: easy puzzles took slightly longer than medium ones](/assets/images/furdoku_grading/xmas-tiers.svg)
 

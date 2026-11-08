@@ -18,17 +18,16 @@ Some of the tested puzzles didn't make it into the release. I often threw away w
 Ever since I was a kid, I've enjoyed puzzles like sudoku and Minesweeper. Furdoku is a sudoku variant, where you place entities such as sheep, people, dogs, and chickens, following the sudoku rules, meaning you must put exactly one of each entity in every row, column and 3x3 box. On top of that, there are special rules, for example, you can't place sheep near wolves, or you need to place a dog near a human, otherwise it feels lonely, and so on. Many cells stay empty, which invites new techniques for solving these puzzles, such as checking how many cells are taken in a row/column/box to decide that certain cell is definitely empty (it feels like Minesweeper at times). Marking cells as empty is part of the game, this way you eliminate where none of the entities can be placed and rely on this for the next steps.
 
 Each pack has its own rules and feels like a slightly different game. Some examples:
-- **Wolf, Goat & Cabbage:** the old river-crossing riddle in a new form. The wolf eats the goat, the goat eats the cabbage. Place goats and cabbages by sudoku rules, but don't allow anything to get eaten.
-- **Pets:** cats like to be on their own, dogs need company. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
+
+**Wolf, Goat & Cabbage:** the old river-crossing riddle in a new form. The wolf eats the goat, the goat eats the cabbage. Place goats and cabbages by sudoku rules, but don't allow anything to get eaten.
+
+**Pets:** cats like to be on their own, dogs need company. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
+
+<img src="/assets/images/furdoku_grading/ipad-pets-rules.jpg" alt="A Pets puzzle on iPad, with the pack's rules open next to the board" width="560">
 
 Every puzzle must have exactly one solution, and importantly, you can get to that solution without trial and error. Everything can be solved by logic alone. To ensure that, I have a solver for each pack that solves puzzles like a human would, using techniques, step by step.
 
 Every pack has easy/medium/hard levels, and to determine these levels I needed to build a grader. That was the main challenge. I will talk more about it below.
-
-<p align="center">
-  <img src="/assets/images/furdoku_grading/2-farm-rules.png" alt="A Farm puzzle with its rules open" width="260">
-  <img src="/assets/images/furdoku_grading/1-monsters.png" alt="A Monsters puzzle" width="260">
-</p>
 
 ### How Furdoku was built
 
@@ -44,9 +43,9 @@ Well, here is the example. You place humans and dogs by sudoku rules. Cats like 
 
 Which one do you think took me longer to solve?
 
-<p align="center">
-  <img src="/assets/images/furdoku_grading/puzzle-b-four-cats.png" alt="Pets puzzle B, with 4 cats" width="300" style="margin: 0 10px 10px;">
-  <img src="/assets/images/furdoku_grading/puzzle-a-seven-cats.png" alt="Pets puzzle A, with 7 cats" width="300" style="margin: 0 10px 10px;">
+<p style="display: flex; gap: 20px;">
+  <img src="/assets/images/furdoku_grading/puzzle-b-four-cats.png" alt="Pets puzzle B, with 4 cats" style="width: calc(50% - 10px);">
+  <img src="/assets/images/furdoku_grading/puzzle-a-seven-cats.png" alt="Pets puzzle A, with 7 cats" style="width: calc(50% - 10px);">
 </p>
 
 The one with fewer clues is done in under 2 min, the one with more clues took 8.

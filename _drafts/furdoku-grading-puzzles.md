@@ -33,7 +33,7 @@ Every pack has easy/medium/hard levels, and to determine these levels I needed t
 
 Furdoku is built on my ideas, design, and mechanics. I drew the art for it on my iPad and put a piece of myself into this project. It was implemented using Claude, where I worked with it closely to ensure good code quality and architecture, and made adjustments wherever things looked fishy. Rules and constraints of the puzzles were defined by me, but the puzzles were generated, and they needed quality (solver) and difficulty (grader) evaluation.
 
-I was teaming up with Claude very closely while building the grader. A couple of common sudoku techniques are applicable to these puzzles, but they are not exhaustive. So after the basic techniques were covered and puzzles still didn't feel like the level they were graded at, we went through what made puzzles _feel_ hard for me, spotting new techniques, more and more advanced, and incorporating them into our tooling. The prototyping went fast, and that was the big strength of AI.
+I was teaming up with Claude very closely while building the grader. My part was spotting patterns we could incorporate into our tooling, and Claude made it possible to quickly implement them and try out ideas. The prototyping went fast, and that was the big strength of AI.
 
 ### Fewer clues == harder, right?
 

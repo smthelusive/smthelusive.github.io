@@ -104,22 +104,22 @@ Part of the reason is that my sudoku variant has at most 2 kinds of entities (ve
 
 ### Deceived by data
 
-One thing that you might have been shouting in your head throughout this whole post was:
-'Girl, your solving skills improved! Time is a bad metric!'.
+One thing you might have been shouting in your head this whole time:
+'Girl, your solving skills improved! Time is a bad metric!'
 And you're absolutely right.
 
 My difficulty formula was based on time ranges for solving: `< 3 min` for easy, `>= 3` and `< 7` for medium, `>= 7` for hard.
-I found myself timing `1:29` for a hard puzzle that genuinely felt hard and made me twist my brain a little. Putting it in the easy tier was just wrong.
+I found myself timing `1:20` for a hard puzzle that genuinely felt hard and made me twist my brain a little. Putting it in the easy tier was just wrong.
 
-At the start, each pack was like a new game. I figured out the logical conclusions which felt more like new discoveries. As you proceed with the pack, you start spotting patterns automatically, they don't need discovery, they're familiar already.
+At the start, each pack was like a new game. I was working out the logic, and every conclusion felt like a new discovery. As you go through a pack, you start spotting patterns automatically. They don't need discovering anymore, they're already familiar.
 
-So I had to change the way I used my times. At that point I had a lot more trust in my grader, because it was backed by science (yeah, right), so the timing became more of supporting information. The puzzles that only need the easiest techniques go to the easy tier, the ones that need advanced techniques can't go in the easy tier. Outside of that, sort them by my time.
+So I had to change the way I used my times. At that point I had a lot more trust in my grader, because it was backed by science (yeah, right), so my times became supporting information. The puzzles that only need the easiest techniques go to the easy tier, the ones that need advanced techniques can't go there. Outside of that, sort them by my time.
 
 The last pack I made was a Christmas pack (v. 1.0.1), and it's a good illustration. In the final version, the easy puzzles took me slightly longer on average than the medium ones, but they stayed in easy because of the techniques they needed.
 
 ![My solve time for each of the 60 Christmas puzzles by shipped tier: easy puzzles took slightly longer than medium ones](/assets/images/furdoku_grading/xmas-tiers.svg)
 
-It looked like it made sense.
+At least, it looked like it made sense.
 
 ### Lessons
 

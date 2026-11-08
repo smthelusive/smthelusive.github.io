@@ -5,7 +5,9 @@ image: /assets/images/thumbnails/furdoku_sheep.png
 excerpt: "After spending about a month building Furdoku, my first iOS game, I came to a conclusion that didn't surprise me at all: building is never the hardest part..."
 ---
 
-After spending about a month building Furdoku, my first iOS game, I came to a conclusion that didn't surprise me at all: building is never the hardest part. The hardest part is actually making it a product, which involves a range of challenges from design to sales and marketing. Most of my time went into the game design. Since it's a puzzle game, I had to figure out how to make it fun, how to make it easy enough and also hard enough, and how to grade it correctly. With AI, building something from scratch with unfamiliar technology no longer surprises anyone, I believe :) So let me share the actually interesting part of the process.
+After spending about a month building Furdoku, my first iOS game, I came to a conclusion that didn't surprise me at all: building is never the hardest part. The hardest part is actually making it a product, which involves a range of challenges from design to sales and marketing.
+
+Most of my time went into the game design. Since it's a puzzle game, I had to figure out how to make it fun, how to make it easy enough and also hard enough, and how to grade it correctly. With AI, building something from scratch with unfamiliar technology no longer surprises anyone, I believe :) So let me share the actually interesting part of the process.
 
 Let's start with some numbers that made me go "wow" when I learned them. I playtested well over 500 puzzles and spent 50+ hours doing it (yes, it was measured).
 
@@ -48,8 +50,8 @@ Which one do you think took me longer to solve?
   <img src="/assets/images/furdoku_grading/puzzle-a-seven-cats.png" alt="Pets puzzle A, with 7 cats" style="width: calc(50% - 10px);">
 </p>
 
-The one with fewer clues took me under 2 min, the one with more clues took 8.
-It turned out that the number of clues didn't matter. I expected a graph telling me otherwise, but the data of solving 150 puzzles in this pack showed there was little to no dependency of my timing on the number of clues ([Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) = `−0.14`, where 0 means "no relationship at all").
+The one with fewer clues took me under `2 min`, the one with more clues took `8 min`.
+It turned out that the number of clues didn't matter. I expected a graph telling me otherwise, but the data of solving 150 puzzles in this pack showed there was little to no dependency of my timing on the number of clues ([Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) = `−0.14`, where `0` means "no relationship at all").
 
 ![My solve time for each of the 150 Pets puzzles against its number of cat clues: no visible relationship](/assets/images/furdoku_grading/clues-vs-time.svg)
 
@@ -98,8 +100,7 @@ When you find yourself needing a pencil and an eraser to solve a sudoku, know th
 
 Hard puzzles are great, but they shouldn't be punishing.
 
-I must say that the grading algorithms I ended up with still didn't fully match how hard the puzzles felt to me.
-Part of the reason is that my sudoku variant has at most 2 kinds of entities (versus 9 digits in classic sudoku), so many techniques that work for classic sudoku don't apply here.
+There is one more nuance: my sudoku variant has at most 2 kinds of entities (versus 9 digits in classic sudoku), so many techniques that work for classic sudoku don't apply here. Instead of dozens of techniques, I had a handful to play with, meaning I had less wiggle room for difficulty.
 
 ### Deceived by data
 

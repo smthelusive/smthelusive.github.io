@@ -19,8 +19,7 @@ Ever since I was a kid, I've enjoyed puzzles like sudoku and Minesweeper. Furdok
 
 Each pack has its own rules and feels like a slightly different game. Some examples:
 - **Wolf, Goat & Cabbage:** the old river-crossing riddle in a new form. The wolf eats the goat, the goat eats the cabbage. Place goats and cabbages by sudoku rules, but don't allow anything to get eaten.
-todo: instead of monsters mention pets, since it's the major example below
-- **Monsters:** each monster looks in its own direction. Place kids on the grid by sudoku rules, but hide them where no monster can see them.
+- **Pets:** cats like to be on their own, dogs need company. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
 
 Every puzzle must have exactly one solution, and importantly, you can get to that solution without trial and error. Everything can be solved by logic alone. To ensure that, I have a solver for each pack that solves puzzles like a human would, using techniques, step by step.
 
@@ -46,12 +45,12 @@ Well, here is the example. You place humans and dogs by sudoku rules. Cats like 
 Which one do you think took me longer to solve?
 
 <p align="center">
-  <img src="/assets/images/furdoku_grading/puzzle-b-four-cats.jpg" alt="Pets puzzle B, with 4 cats" width="300">
-  <img src="/assets/images/furdoku_grading/puzzle-a-seven-cats.jpg" alt="Pets puzzle A, with 7 cats" width="300">
+  <img src="/assets/images/furdoku_grading/puzzle-b-four-cats.png" alt="Pets puzzle B, with 4 cats" width="300" style="margin: 0 10px 10px;">
+  <img src="/assets/images/furdoku_grading/puzzle-a-seven-cats.png" alt="Pets puzzle A, with 7 cats" width="300" style="margin: 0 10px 10px;">
 </p>
 
 The one with fewer clues is done in under 2 min, the one with more clues took 8.
-It turned out that the number of clues didn't matter. I expected a graph telling me otherwise, but the data of solving 150 puzzles in this pack showed there was little to no dependency of my timing on the number of clues ([Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) = −0.14, where 0 means "no relationship at all").
+It turned out that the number of clues didn't matter. I expected a graph telling me otherwise, but the data of solving 150 puzzles in this pack showed there was little to no dependency of my timing on the number of clues ([Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) = `−0.14`, where 0 means "no relationship at all").
 
 ![My solve time for each of the 150 Pets puzzles against its number of cat clues: no visible relationship](/assets/images/furdoku_grading/clues-vs-time.svg)
 
@@ -92,16 +91,16 @@ But that is not the whole story...
 
 ### Nuances
 
-Playing it all myself mattered for finding the strange outliers and putting them behind my filter.
+Playing it all myself mattered for finding the strange outliers and filtering them out.
 
-Yes, technically it was all solvable by logic, but at some point I found myself holding two hypotheses in my head at the same time before I could place anything, and it felt like trial and error. That's how the sudoku solving algorithms work (backtracking), they try different possibilities that fit until they stumble upon a conflict, and if they do, they go back and try another possibility. A fancier type of bruteforce.
+Yes, technically it was all solvable by logic, but at some point I found myself holding two hypotheses in my head at the same time before I could place anything, and it felt like trial and error. That's also the simplest brute-force approach a program can use to get to a solution (backtracking): try different possibilities that fit until you stumble upon a conflict, and if you do, go back and try another possibility.
 
-When you find yourself needing a pencil and an eraser to solve sudoku, know that something is wrong. I found myself with a mental pencil writing mental notes, but only one level deep into the possibility tree. Those kinds of puzzles were thrown away.
+When you find yourself needing a pencil and an eraser to solve a sudoku, know that something is wrong. I caught myself using a mental pencil to write mental notes, even if only one level deep into the possibility tree. Puzzles like that were thrown away.
 
 Hard puzzles are great, but they shouldn't be punishing.
 
-I must say that the grading algorithms I ended up with still couldn't fully consistently correlate with how hard they felt for me.
-Part of the reason is that my sudoku variant has at most 2 entities (versus 9 digits in classic sudoku), so many techniques that worked for classic sudoku couldn't apply here.
+I must say that the grading algorithms I ended up with still didn't fully match how hard the puzzles felt to me.
+Part of the reason is that my sudoku variant has at most 2 kinds of entities (versus 9 digits in classic sudoku), so many techniques that work for classic sudoku don't apply here.
 
 ### Deceived by data
 
@@ -109,8 +108,8 @@ One thing that you might have been shouting in your head throughout this whole p
 'Girl, your solving skills improved! Time is a bad metric!'.
 And you're absolutely right.
 
-My difficulty formula was based on time ranges for solving: < 3 min for easy, >= 3 and < 7 for medium, >= 7 for hard.
-I found myself timing 1:29 for a hard puzzle that genuinely felt hard and made me twist my brain a little. Putting it in the easy tier was just wrong.
+My difficulty formula was based on time ranges for solving: `< 3 min` for easy, `>= 3` and `< 7` for medium, `>= 7` for hard.
+I found myself timing `1:29` for a hard puzzle that genuinely felt hard and made me twist my brain a little. Putting it in the easy tier was just wrong.
 
 At the start, each pack was like a new game. I figured out the logical conclusions which felt more like new discoveries. As you proceed with the pack, you start spotting patterns automatically, they don't need discovery, they're familiar already.
 
@@ -118,7 +117,9 @@ So I had to change the way I used my times. At that point I had a lot more trust
 
 The last pack I made was a Christmas pack (v. 1.0.1), and it's a good illustration. In the final version, the easy puzzles took me slightly longer on average than the medium ones, but they stayed in easy because of the techniques they needed.
 
-It all finally made sense.
+![My solve time for each of the 60 Christmas puzzles by shipped tier: easy puzzles took slightly longer than medium ones](/assets/images/furdoku_grading/xmas-tiers.svg)
+
+It looked like it made sense.
 
 ### Lessons
 
@@ -128,7 +129,10 @@ In the ideal world with ideal me this would have been a correct approach:
 - give them smaller batches to avoid their learning curves;
 - ask them to write down what were the hardest places (incorporating this data was one of the most important signals that worked for me).
 
-If I am completely honest, I am still not sure that I did it right in the end. If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](TODO-app-store-link).
+If I am completely honest, I am still not sure that I did it right in the end.
+
+If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](TODO-app-store-link).
+To talk about Furdoku welcome here: [nataliia@frozenbits.se](mailto:nataliia@frozenbits.se).
 
 Thank you for reading! I hope you enjoyed it and will come back when I tell you about my next project 👀
 
@@ -139,22 +143,12 @@ Thank you for reading! I hope you enjoyed it and will come back when I tell you 
 <!--
 REVIEW NOTES (Claude, 2026-11-07). Delete this block before publishing; it doesn't render.
 
-FACTS TO FIX
-
-- fix the todo in packs list
-- check the ordering of paragraphs and when the paper should be mentioned in relation to rounds to avoid percention that rounds came after i discovered the paper
-
 FLOW
-- The paper/techniques/rounds/scoring part is dense: paper, pack techniques, weights, rounds and
-  scoring all arrive in one block. Reordering per fact 3 fixes most of it.
-- "The graph improved": give the number here (0.46) or merge with the next paragraph; the reader
-  waits two sentences for it.
+
 - "That's how the sudoku solving algorithms work (backtracking)" -> "That's how brute-force
   solvers work". Your own solver works like a human, so the general phrase contradicts the
   "What is Furdoku?" section.
-- "Nuances" heading is vague. Something like "Solvable isn't the same as fair" says what's in it.
-- Christmas pack claim (easy slower than medium on average): not verified by Claude. Check it
-  against your log before publishing.
+
 
 STILL OPEN (yours): App Store link (TODO-app-store-link)
 -->

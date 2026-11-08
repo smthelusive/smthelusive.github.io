@@ -123,32 +123,19 @@ At least, it looked like it made sense.
 
 ### Lessons
 
-In the ideal world with ideal me this would have been a correct approach:
+In an ideal world, with an ideal me, this would have been the right approach:
 - find research on the matter on day one, don't blindly bump into things;
 - involve more people in testing;
-- give them smaller batches to avoid their learning curves;
-- ask them to write down what were the hardest places (incorporating this data was one of the most important signals that worked for me).
+- give them smaller batches, so their learning curve doesn't skew the times;
+- ask them to write down where they got stuck the most (this was one of the signals that worked best for me).
 
 If I am completely honest, I am still not sure that I did it right in the end.
 
 If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](TODO-app-store-link).
-To talk about Furdoku welcome here: [nataliia@frozenbits.se](mailto:nataliia@frozenbits.se).
+If you want to talk about Furdoku, write me at [nataliia@frozenbits.se](mailto:nataliia@frozenbits.se).
 
 Thank you for reading! I hope you enjoyed it and will come back when I tell you about my next project 👀
 
 <p align="center">
   <img class="no-plate" src="/assets/images/furdoku_grading/sheep-sunglasses.png" alt="A sheep from Furdoku wearing sunglasses" width="220">
 </p>
-
-<!--
-REVIEW NOTES (Claude, 2026-11-07). Delete this block before publishing; it doesn't render.
-
-FLOW
-
-- "That's how the sudoku solving algorithms work (backtracking)" -> "That's how brute-force
-  solvers work". Your own solver works like a human, so the general phrase contradicts the
-  "What is Furdoku?" section.
-
-
-STILL OPEN (yours): App Store link (TODO-app-store-link)
--->

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "What makes a puzzle hard? Grading puzzles for my first iOS game"
+date:   2026-11-12 00:00:00 +0100
 image: /assets/images/thumbnails/furdoku_sheep.png
 excerpt: "After spending about a month building Furdoku, my first iOS game, I came to a conclusion that didn't surprise me at all: building is never the hardest part..."
 ---
@@ -23,7 +24,7 @@ Each pack has its own rules and feels like a slightly different game. Some examp
 
 **Wolf, Goat & Cabbage**: the old river-crossing riddle in a new form. The wolf eats the goat, the goat eats the cabbage. Place goats and cabbages by sudoku rules, but don't allow anything to get eaten.
 
-**Pets**: cats like to be on their own, dogs need company. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
+**Pets**: cats like to be on their own, dogs don't. Place humans and dogs by sudoku rules, but nothing can stand next to a cat, and every dog needs a human next to it.
 
 <img src="/assets/images/furdoku_grading/ipad-pets-rules.jpg" alt="A Pets puzzle on iPad, with the pack's rules open next to the board" width="560">
 
@@ -96,9 +97,7 @@ Playing it all myself mattered for finding the strange outliers and filtering th
 
 Yes, technically it was all solvable by logic, but at some point I found myself holding two hypotheses in my head at the same time before I could place anything, and it felt like trial and error. That's also the simplest brute-force approach a program can use to get to a solution (backtracking): try different possibilities that fit until you stumble upon a conflict, and if you do, go back and try another possibility.
 
-When you find yourself needing a pencil and an eraser to solve a sudoku, know that something is wrong. I caught myself using a mental pencil to write mental notes, even if only one level deep into the possibility tree. Puzzles like that were thrown away.
-
-Hard puzzles are great, but they shouldn't be punishing.
+When you find yourself needing a pencil and an eraser to solve a sudoku, know that something is wrong. I caught myself using a mental pencil to write mental notes, even if only one level deep into the possibility tree. Puzzles like that were thrown away. Hard puzzles are great, but they shouldn't be punishing.
 
 There is one more nuance: my sudoku variant has at most 2 kinds of entities (versus 9 digits in classic sudoku), so many techniques that work for classic sudoku don't apply here. Instead of dozens of techniques, I had a handful to play with, meaning I had less wiggle room for difficulty.
 
@@ -131,7 +130,7 @@ In an ideal world, with an ideal me, this would have been the right approach:
 
 If I am completely honest, I am still not sure that I did it right in the end.
 
-If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](TODO-app-store-link).
+If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](https://apps.apple.com/app/furdoku/id6825307980).
 If you want to talk about Furdoku, write me at [nataliia@frozenbits.se](mailto:nataliia@frozenbits.se).
 
 Thank you for reading! I hope you enjoyed it and will come back when I tell you about my next project 👀

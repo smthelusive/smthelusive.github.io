@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What makes a puzzle hard? Grading puzzles for my first iOS game"
-date:   2026-11-12 00:00:00 +0100
+date:   2026-11-12 12:00:00 +0100
 image: /assets/images/thumbnails/furdoku_sheep.png
 excerpt: "After spending about a month building Furdoku, my first iOS game, I came to a conclusion that didn't surprise me at all: building is never the hardest part..."
 ---

@@ -130,7 +130,7 @@ In an ideal world, with an ideal me, this would have been the right approach:
 
 If I am completely honest, I am still not sure that I did it right in the end.
 
-If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](https://apps.apple.com/app/furdoku/id6825307980).
+If you're willing to <del>supply more data</del> play Furdoku for fun and fun only, [here it is](https://apps.apple.com/app/apple-store/id6825307980?pt=129655037&ct=blog&mt=8).
 If you want to talk about Furdoku, write me at [nataliia@frozenbits.se](mailto:nataliia@frozenbits.se).
 
 Thank you for reading! I hope you enjoyed it and will come back when I tell you about my next project 👀

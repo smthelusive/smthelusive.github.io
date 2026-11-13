@@ -32,6 +32,7 @@
 }
 
 /* ---------- Top: title and level picker ---------- */
+/* The title uses the blog's own .hand-heading + squiggle, like other pages. */
 
 .bp-top {
     display: flex;
@@ -42,16 +43,8 @@
     margin-bottom: 28px;
 }
 
-.bp-title {
-    margin: 0;
-    font-family: 'Silkscreen', 'Courier New', monospace;
-    font-size: clamp(24px, 5vw, 36px);
-    color: var(--accent);
-    letter-spacing: 1px;
-}
-
 .bp-level-label {
-    margin: 4px 0 0;
+    margin: 12px 0 0;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 600;
     font-size: 18px;

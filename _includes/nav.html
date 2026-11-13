@@ -24,13 +24,14 @@
 {%- assign url_parts = page.url | split: '/' -%}
 {%- assign section = url_parts[1] -%}
 <nav class="site-nav" aria-label="Main">
-    <a href="/" class="nav-button{% unless section == 'talks' or section == 'comics' or section == 'about' %} active{% endunless %}">blog</a>
+    <a href="/" class="nav-button{% unless section == 'talks' or section == 'comics' or section == 'bytecode-puzzle' or section == 'about' %} active{% endunless %}">blog</a>
     <a href="/talks" class="nav-button{% if section == 'talks' %} active{% endif %}">talks</a>
     <a href="/comics" class="nav-button{% if section == 'comics' %} active{% endif %}">comics</a>
+    <a href="/bytecode-puzzle" class="nav-button{% if section == 'bytecode-puzzle' %} active{% endif %}">puzzles</a>
     <a href="/about" class="nav-button{% if section == 'about' %} active{% endif %}">about</a>
-    <a href="https://buymeacoffee.com/nataliiadziubenko" class="nav-button nav-coffee" onclick="countVisit(event)">
+    <a href="https://buymeacoffee.com/nataliiadziubenko" class="nav-button nav-coffee" aria-label="Buy me a coffee" onclick="countVisit(event)">
         <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M5 9.5 C 5 9, 16 8.6, 16.5 9.2 C 16.8 12, 16.4 16.5, 14 18.6 C 12.4 19.8, 8.6 19.7, 7.1 18.5 C 5.1 16.6, 4.8 12.4, 5 9.5 Z M16.4 11 C 19.6 10.4, 20.4 13.6, 17.8 15 C 17.2 15.3, 16.4 15.4, 15.8 15.2 M8.2 6.6 C 7.4 5.4, 9 4.6, 8.4 3.2 M11.4 6.6 C 10.6 5.4, 12.2 4.6, 11.6 3.2"/></svg>
-        buy me a coffee
+        bmc
     </a>
     <button type="button" class="nav-button theme-toggle" onclick="toggleTheme()" aria-label="Switch between light and dark mode">
         <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M20 14.5 A 8.5 8.5 0 1 1 9.5 4 A 6.8 6.8 0 0 0 20 14.5 Z"/></svg>

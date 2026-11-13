@@ -1,0 +1,64 @@
+---
+layout: default
+title: jvm bytecode puzzles
+description: Drag JVM instructions into a method and make the operand stack match the goal.
+permalink: /bytecode-puzzle/
+---
+<link rel="stylesheet" href="/bytecode-puzzle/game.css">
+
+<div class="bp">
+    <header class="bp-top">
+        <div>
+            <h1 class="bp-title">jvm bytecode puzzles</h1>
+            <p class="bp-level-label" aria-live="polite"></p>
+        </div>
+        <nav class="bp-levels" aria-label="Levels"></nav>
+    </header>
+
+    <div class="bp-board">
+        <section class="bp-panel bp-toolbox-panel" aria-labelledby="bp-toolbox-heading">
+            <h2 id="bp-toolbox-heading">instructions</h2>
+            <p class="bp-hint">drag into the method, or tap to add</p>
+            <div class="bp-toolbox"></div>
+            <p class="bp-help" aria-live="polite">&nbsp;</p>
+        </section>
+
+        <section class="bp-panel bp-program-panel" aria-labelledby="bp-program-heading">
+            <h2 id="bp-program-heading">your method</h2>
+            <p class="bp-code-header"></p>
+            <ol class="bp-program"></ol>
+            <div class="bp-controls">
+                <button type="button" class="hand-button bp-run">▶ run</button>
+                <button type="button" class="hand-button hand-button-blue bp-step">step</button>
+                <button type="button" class="hand-button hand-button-blue bp-reset">reset</button>
+                <button type="button" class="bp-clear">clear</button>
+            </div>
+        </section>
+
+        <section class="bp-panel bp-machine-panel" aria-labelledby="bp-machine-heading">
+            <h2 id="bp-machine-heading" class="bp-visually-hidden">machine</h2>
+            <div class="bp-machines">
+                <div class="bp-machine bp-now">
+                    <h3>now</h3>
+                    <div class="bp-stack-label">operand stack</div>
+                    <div class="bp-stack"></div>
+                    <div class="bp-locals-label">locals</div>
+                    <div class="bp-locals"></div>
+                </div>
+                <div class="bp-machine bp-goal">
+                    <h3>goal</h3>
+                    <div class="bp-stack-label">operand stack</div>
+                    <div class="bp-stack"></div>
+                    <div class="bp-locals-label">locals</div>
+                    <div class="bp-locals"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="bp-status" role="status" aria-live="polite"></div>
+</div>
+
+<script src="/bytecode-puzzle/engine.js"></script>
+<script src="/bytecode-puzzle/levels.js"></script>
+<script src="/bytecode-puzzle/game.js"></script>

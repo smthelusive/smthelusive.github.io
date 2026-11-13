@@ -12,9 +12,9 @@
     --tile-shuffle: #B9E4C9;
     --good: #2E7D5B;
     --bad: #B3364A;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 24px 16px 200px; /* room so the result card never covers the end of the page */
+    /* Width and side gutters come from the blog's .container; top matches .section-heading. */
+    padding-top: 32px;
+    padding-bottom: 200px; /* room so the result card never covers the end of the page */
     color: var(--text);
 }
 

@@ -312,16 +312,17 @@ body.bp-dragging * { cursor: grabbing !important; }
     opacity: 0.7;
 }
 
+/* Four equal columns, so the buttons stay on one row and line up at any width. */
 .bp-controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
 }
 
 .bp-controls .hand-button {
+    justify-content: center;
     min-height: 40px;
-    padding: 0 16px;
+    padding: 0 6px;
     font-size: 15px;
     cursor: pointer;
 }
@@ -333,18 +334,9 @@ body.bp-dragging * { cursor: grabbing !important; }
     box-shadow: none;
 }
 
-.bp-clear {
-    margin-left: auto;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 14px;
-    color: var(--muted);
-    background: none;
-    border: none;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.bp-clear:disabled { visibility: hidden; }
+/* Paper-coloured, so it reads as the quiet one next to run/step/reset. */
+.bp-controls .bp-clear { background: #F1EEE9; }
+.bp-controls .bp-clear:hover { background: #E4DFD6; }
 
 /* ---------- Machine: stack and locals ---------- */
 

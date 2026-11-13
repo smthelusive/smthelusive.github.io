@@ -81,7 +81,7 @@
     // ---------- Rendering ----------
     function renderAll() {
         renderLevelPicker();
-        el.levelLabel.textContent = 'level ' + levelIndex + ' of ' + levels.length;
+        el.levelLabel.textContent = 'level ' + levelIndex;
         el.codeHeader.textContent = 'Code: stack=' + (level.maxStack || 8) + ', locals=' + localCount();
         renderToolbox();
         renderProgram();
@@ -341,6 +341,7 @@
             return;
         }
         var best = saved.solved[levelIndex];
+        if (!best) countSolve(levelIndex);
         if (!best || program.length < best) saved.solved[levelIndex] = program.length;
         save();
         renderLevelPicker();
@@ -373,6 +374,14 @@
         }
         setStatus('Verified! The stack checks out.', 'win', extra);
         confetti();
+    }
+
+    // Same hits.sh trick as the coffee button: loading the badge bumps a counter.
+    // One counter per level, first solve per browser only, and never from local previews.
+    // Stats: https://hits.sh/nataliiadziubenko.com/bytecode-puzzle-solved-<level>/
+    function countSolve(index) {
+        if (location.hostname !== 'nataliiadziubenko.com') return;
+        new Image().src = 'https://hits.sh/nataliiadziubenko.com/bytecode-puzzle-solved-' + index + '.svg';
     }
 
     function confetti() {

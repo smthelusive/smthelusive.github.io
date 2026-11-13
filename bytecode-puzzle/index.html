@@ -4,7 +4,7 @@ title: jvm bytecode puzzles
 description: Drag JVM instructions into a method and make the operand stack match the goal.
 permalink: /bytecode-puzzle/
 ---
-<link rel="stylesheet" href="/bytecode-puzzle/game.css">
+<link rel="stylesheet" href="/bytecode-puzzle/game.css?v={{ site.time | date: "%s" }}">
 
 <div class="bp">
     <header class="bp-top">
@@ -59,6 +59,6 @@ permalink: /bytecode-puzzle/
     <div class="bp-status" role="status" aria-live="polite"></div>
 </div>
 
-<script src="/bytecode-puzzle/engine.js"></script>
-<script src="/bytecode-puzzle/levels.js"></script>
-<script src="/bytecode-puzzle/game.js"></script>
+<script src="/bytecode-puzzle/engine.js?v={{ site.time | date: "%s" }}"></script>
+<script src="/bytecode-puzzle/levels.js?v={{ site.time | date: "%s" }}"></script>
+<script src="/bytecode-puzzle/game.js?v={{ site.time | date: "%s" }}"></script>

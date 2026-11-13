@@ -1,8 +1,6 @@
 // A tiny int-only subset of the JVM: an operand stack, local variables, and
-// the instructions the levels hand out. Works in the browser and in node (for the solver).
+// the instructions the levels hand out. Works in the browser and in _solve.js (node or jsc).
 (function (root) {
-    var INT_MIN = -2147483648;
-
     function VmError(kind, message) {
         this.kind = kind;
         this.message = message;
@@ -101,7 +99,6 @@
     }
 
     root.BytecodeEngine = {
-        INT_MIN: INT_MIN,
         VmError: VmError,
         help: help,
         initialState: initialState,

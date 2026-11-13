@@ -44,7 +44,7 @@
         stopTimer();
         levelIndex = index;
         level = levels[index];
-        program = (saved.programs[index] || []).filter(function (insn) { return insn in level.tools; });
+        program = (saved.programs[index] || []).slice();
         trimToTools();
         run = null;
         saved.current = index;
@@ -53,12 +53,12 @@
         setStatus('');
     }
 
-    // Drop instructions that no longer fit the bag (e.g. after a level was edited).
+    // Drop saved instructions that no longer fit the bag (e.g. after a level was edited).
     function trimToTools() {
         var used = {};
         program = program.filter(function (insn) {
             used[insn] = (used[insn] || 0) + 1;
-            return used[insn] <= level.tools[insn];
+            return used[insn] <= (level.tools[insn] || 0);
         });
     }
 
@@ -188,7 +188,7 @@
             }
             var index = pi++;
             li.className = 'bp-line';
-            if (run && run.pc === index && !run.done) li.classList.add('next');
+            if (run && run.pc === index && !run.done && !run.error) li.classList.add('next');
             if (run && index < run.pc) li.classList.add('ran');
             if (run && run.error && run.pc === index) li.classList.add('failed');
             var off = document.createElement('span');
@@ -223,7 +223,7 @@
     }
 
     function goalAsState() {
-        return { stack: level.goal.stack || [], locals: level.goal.locals || [], maxStack: level.maxStack || 8, isGoal: true };
+        return { stack: level.goal.stack || [], locals: level.goal.locals || [], isGoal: true };
     }
 
     // Draws the stack (top at the top) and the local variable slots.
@@ -305,6 +305,7 @@
     function stepOnce() {
         if (!run) run = { pc: 0, state: engine.initialState(level) };
         if (run.done || run.error) return false;
+        // Starting over after a finished run: show the start state again before the first step.
         if (run.pc === 0) renderMachine(el.now, run.state);
         var insn = program[run.pc];
         var before = run.state;
@@ -529,9 +530,7 @@
         var old = el.program.querySelector('.bp-placeholder');
         if (old) old.remove();
         if (at === undefined) return;
-        var lines = Array.prototype.filter.call(el.program.querySelectorAll('.bp-line'), function (li) {
-            return !li.querySelector('.bp-lifted');
-        });
+        var lines = visibleLines();
         var ph = document.createElement('li');
         ph.className = 'bp-placeholder';
         el.program.insertBefore(ph, lines[at] || null);
@@ -542,12 +541,16 @@
         return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
     }
 
-    function dropIndex(y) {
-        var lines = Array.prototype.filter.call(el.program.querySelectorAll('.bp-line'), function (li) {
+    // The lifted line is hidden but still in the DOM, so leave it out.
+    function visibleLines() {
+        return Array.prototype.filter.call(el.program.querySelectorAll('.bp-line'), function (li) {
             return !li.querySelector('.bp-lifted');
         });
+    }
+
+    function dropIndex(y) {
         var at = 0;
-        lines.forEach(function (li) {
+        visibleLines().forEach(function (li) {
             var r = li.getBoundingClientRect();
             if (y > r.top + r.height / 2) at++;
         });

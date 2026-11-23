@@ -1,0 +1,24 @@
+<script>
+    function toggleTheme() {
+        var root = document.documentElement;
+        var osTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var current = root.getAttribute('data-theme') || osTheme;
+        var next = current === 'dark' ? 'light' : 'dark';
+        // Only remember a choice that overrides the OS setting.
+        if (next === osTheme) {
+            root.removeAttribute('data-theme');
+            try { localStorage.removeItem('theme'); } catch (e) {}
+        } else {
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        }
+    }
+</script>
+<a id="skip-to-content" href="#content">Skip to the content.</a>
+<nav class="site-nav" aria-label="Main">
+    <a href="/cozy-corner/" class="nav-button{% if page.url == '/cozy-corner/' %} active{% endif %}">all posts</a>
+    <button type="button" class="nav-button theme-toggle" onclick="toggleTheme()" aria-label="Switch between light and dark mode">
+        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M20 14.5 A 8.5 8.5 0 1 1 9.5 4 A 6.8 6.8 0 0 0 20 14.5 Z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5 V5 M12 19 V21.5 M2.5 12 H5 M19 12 H21.5 M5.3 5.3 L7 7 M17 17 L18.7 18.7 M5.3 18.7 L7 17 M17 7 L18.7 5.3"/></svg>
+    </button>
+</nav>

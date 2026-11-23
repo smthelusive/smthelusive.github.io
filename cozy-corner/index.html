@@ -1,0 +1,31 @@
+---
+layout: cozy-default
+title: Cozy Corner
+description: "Cozy puzzles and games: where to find good puzzles, sudoku variants worth trying and why solving puzzles is good for you."
+---
+{%- assign notes = site.cozy_corner | sort: "date" | reverse -%}
+<div class="home">
+    <div class="container">
+        <div class="section-heading">
+            <h1 class="hand-heading">cozy corner{% include squiggle.html %}</h1>
+        </div>
+        <div class="post-grid">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {%- for note in notes %}
+            <a class="post-card" href="{{ note.url | relative_url }}">
+                <span class="tape"></span>
+                {%- if note.image %}
+                <div class="post-thumb">
+                    <img src="{{ note.image }}" alt="" loading="lazy">
+                </div>
+                {%- endif %}
+                <div class="post-card-meta">
+                    <span class="post-date">{{ note.date | date: date_format }}</span>
+                </div>
+                <h3>{{ note.title | escape }}</h3>
+                <p>{{ note.excerpt | strip_html | truncatewords: 32 }}</p>
+            </a>
+            {%- endfor %}
+        </div>
+    </div>
+</div>

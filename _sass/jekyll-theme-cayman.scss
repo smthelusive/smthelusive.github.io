@@ -1162,3 +1162,65 @@ a.note-card {
   font-weight: 700;
   font-size: 34px;
 }
+
+// ---------- Cozy corner ----------
+// Posts for puzzle players and cozy gamers: same paper and fonts, warmer colours.
+.cozy-corner {
+  --header-from: #B4562F;
+  --header-to: #7A3366;
+  --accent: #A3452E;
+  --chip-bg: rgba(180, 86, 47, 0.14);
+
+  .section-heading {
+    display: block;
+
+    .hand-heading {
+      display: inline-block;
+    }
+  }
+
+  // Screenshots are light pages; a white frame keeps them apart from the text in both themes.
+  .post-content figure img {
+    padding: 10px;
+    background: #FFFFFF;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 var(--shadow);
+  }
+
+  // Keep small pixel-art screenshots crisp when scaled up.
+  .post-content figure img.pixel-art {
+    image-rendering: pixelated;
+  }
+
+  .more-notes {
+    margin-top: 40px;
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+}
+
+@mixin cozy-corner-dark {
+  .cozy-corner {
+    --header-from: #7A4535;
+    --header-to: #3E1C3D;
+    --accent: #F2A98F;
+    --chip-bg: rgba(242, 169, 143, 0.16);
+  }
+}
+
+:root[data-theme="dark"] {
+  @include cozy-corner-dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include cozy-corner-dark;
+  }
+}

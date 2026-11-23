@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+{% include head.html %}
+</head>
+<body class="cozy-corner">
+
+<header class="site-header site-header-compact">
+    <div class="compact-row">
+        <div class="brand">
+            <a href="/cozy-corner/" class="site-title">Cozy Corner</a>
+            <span class="byline">by Nataliia Dziubenko</span>
+        </div>
+        {% include cozy-nav.html %}
+    </div>
+    {% include wave.html class="header-wave" %}
+</header>
+<main id="content" class="main-content">
+    {{ content }}
+</main>
+<footer class="site-footer">
+    <p class="copyright">© {{ site.time | date: '%Y' }} Nataliia Dziubenko · <a href="/about">about me</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+---
+layout: cozy-default
+---
+<div class="container container-narrow">
+<article class="post sheet h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <span class="tape"></span>
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+        {% include squiggle.html %}
+        <p class="post-meta">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: date_format }}
+            </time>
+            {%- if page.modified_date -%}
+            ~
+            {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+            <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+                {{ mdate | date: date_format }}
+            </time>
+            {%- endif -%}
+        </p>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    {%- assign others = site.cozy_corner | where_exp: "note", "note.url != page.url" | sort: "date" | reverse -%}
+    {%- if others.size > 0 %}
+    <div class="more-notes">
+        <h2 class="hand-heading">more from the cozy corner</h2>
+        <ul>
+            {%- for note in others limit: 3 %}
+            <li><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></li>
+            {%- endfor %}
+        </ul>
+    </div>
+    {%- endif %}
+
+    <div class="post-footer">
+        <a href="https://hits.sh/nataliiadziubenko.com/{{ page.title | slugify}}">
+            <img alt="Hits" src="https://hits.sh/nataliiadziubenko.com/{{ page.title | slugify}}.svg?style=flat-square&label=visits&color=5C2E7E&labelColor=0F3460"/></a>
+        <a href="/cozy-corner/" class="hand-button">← cozy corner</a>
+    </div>
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+</div>

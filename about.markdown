@@ -29,5 +29,6 @@ But mostly I like to write about it, that’s why this blog exists.
 If you're curious, [here you can find some of my talks]({{ site.baseurl }}{% link talks.markdown %})
 and some of my other work, such as a [Java magazine article](https://www.flipsnack.com/558F85AA9F7/jam03-23-7u8g5l3tk5/full-view.html?p=6)
 or a [dev.java method handle tutorial](https://dev.java/learn/introduction_to_method_handles/).
+This site also has a [cozy corner]({{ site.baseurl }}{% link cozy-corner/index.html %}), if you're curious.
 
 Hope you find this blog educative and fun!
